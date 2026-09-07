@@ -1,4 +1,4 @@
-﻿government = monarchy
+government = monarchy
 add_government_reform = feudalism_reform
 government_rank = 1
 technology_group = western
@@ -6,7 +6,6 @@ religion = catholic
 primary_culture = romagnan
 capital = 106	# Modena
 fixed_capital = 106 # Cannot move capital away from this province & no power cost to move to it
-
 
 # KobrasMP 1444 restored start
 1441.1.1 = {
@@ -134,7 +133,6 @@ fixed_capital = 106 # Cannot move capital away from this province & no power cos
 	}
 }
 
-
 1662.7.6 = { government = monarchy
 add_government_reform = autocracy_reform }
 
@@ -181,7 +179,6 @@ add_government_reform = autocracy_reform }
 		dynasty = "d'Este"
 		birth_date = 1698.7.2
 		death_date = 1780.2.22
-		claim = 95
 		adm = 1
 		dip = 0
 		mil = 3
