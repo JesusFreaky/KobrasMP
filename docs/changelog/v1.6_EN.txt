@@ -1,0 +1,127 @@
+KOBRAS MP OVERHAUL — CHANGELOG v1.6 (ENGLISH)
+==================================================
+
+COMPARISON BASE
+---------------
+Kobras 1.5 -> Kobras 1.6 Pre-Missions Final
+
+v1.6 closes the preparation phase before the major mission-tree work planned for v1.7. This changelog records only changes that remain in the final 1.6 build; ideas, prototypes and subsequently reverted content are excluded.
+
+PHYSICAL DELTA AUDIT
+--------------------
+- 6,848 files in the compared 1.5 build.
+- 7,882 files in the compared 1.6 build.
+- 1,042 files added compared to 1.5.
+- 8 files removed.
+- 123 existing files changed.
+- 1,173 different paths in the 1.5 -> 1.6 delta.
+- Of the 1,042 added files, 945 are Vanilla-equivalent copies materialized inside the mod as a physical baseline; presence in the mod does not imply a gameplay change.
+
+VANILLA HISTORY MATERIALIZED INSIDE THE MOD
+-------------------------------------------
+- A large portion of Vanilla `history/` is now physically present inside Kobras.
+- Non-custom files are retained as a local Vanilla baseline.
+- Files already modified by Kobras preserve the Kobras version.
+- Consolidated priority rule: EXISTING KOBRAS > COPIED VANILLA.
+- Goal: enable rollback, auditing and future editing directly inside the mod without confusing physical presence with an actual modification.
+
+HRE — NEW TAGS / FILLERS
+------------------------
+- 26 new HRE country definitions added with country files, country tags, flags, localisation and country history.
+- Added tags: Amberg, Aschaffenburg, Baden-Baden, Celle, Cottbus, Erfurt, Fulda, Görlitz, Göttingen, Halle, Hoya, Koblenz, Kolberg, Meppen, Neubrandenburg, Reutlingen, Stade, Stargard, Stolp, Stralsund, Vogtland, Wismar, Wittenberg, Worms, Zweibrücken and Zwickau.
+- Multiple German provinces receive new ownership/history setup to support these entities.
+- `German_alliances.txt` modified for the new setup.
+
+1444 SETUP AND RULERS
+---------------------
+- Country histories for custom/restored nations corrected to prevent No Ruler states at the 1444 start.
+- Final-build corrections include Corsica, Tabriz, Bulgaria, Pisa, Osnabrück, Calenberg, Coburg, Lusatia, Modena and Rügen.
+- Teutonic Order starts with Konrad von Erlichshausen 3/3/5.
+- Scotland receives James II 4/4/5.
+- Jerusalem retains Baldwin and receives Amaury as a 4/4/4 heir, age 5 at the 1444 start.
+- Karabakh receives a Hasan-Jalalyan setup with Jalal III 4/4/4 and heir Hatir 4/4/4.
+- Aragon and other histories directly touched during consolidation also remain adjusted in the final build.
+
+NORWAY / NORSE
+--------------
+- Custom v1.6 Norse content remains materialized.
+- `KOB_Norse_Decisions.txt` added.
+- `KOB_Norse_1_6.txt` modifier file added.
+- Custom Norse localisation added.
+- Vikingr/Norse route uses Marines.
+- Marine Fraction set to 15% in the approved content.
+- Norwegian Marine buffs: +10% Infantry Combat Ability, +10% Shock Damage, -10% Shock Damage Received and +10% Morale Damage.
+- Player-only Norse conversion decision remains available while a subject according to the content rules.
+- Nordvegr remains the final identity/tag planned by the consolidated Norse route, tied to independence and Scandinavian consolidation.
+
+SERBIA
+------
+- Custom Serbian content preserved in the final build.
+- `EMP_Serbian_Missions.txt` remains different from Vanilla.
+- `KOB_Serbia_1_6.txt` and custom localisation remain in the package.
+
+BULGARIA
+--------
+- Bulgarian Missions remain custom in the final build.
+- Custom mission modifiers preserved.
+- Custom localisation preserved.
+
+ANGEVIN / BRITAIN
+-----------------
+- Adjusted Angevin content remains in the final build.
+- `DOM_Britain_Missions.txt` is materialized with custom changes.
+- Custom Angevin localisation remains.
+- `ave_eliminate_burgundy` retains a military resolution and a political route tied to an independent Burgundy under Marie de Bourgogne.
+- There is no consolidated “Dauphin accepted at court” requirement in this resolution.
+
+BURGUNDIAN INHERITANCE
+----------------------
+- `Incident_Burgundian_Inheritance.txt` remains modified.
+- `KOB_Burgundian_Inheritance_Reactions.txt` added.
+- Custom opinion modifier and localisation added.
+- Custom Marie/Burgundian Succession content preserved.
+
+MISSION TREE RESET BEFORE v1.7
+------------------------------
+- Part of the previous experimental/custom mission content was removed or returned to Vanilla before closing v1.6.
+- Burgundian and Crusader mission files are restored to Vanilla content in the final build.
+- Older custom Spain, Dutch, Westphalia, English, Gotlandish and Polish mission files leave the v1.6 layer.
+- Bavarian, Milanese and Papal mission files are materialized from Vanilla as clean reconstruction points.
+- v1.6 deliberately ends as PRE-MISSIONS FINAL: detailed mission-tree reconstruction becomes v1.7 work.
+
+MERCENARIES
+-----------
+- Custom Kobras mercenary system added in `01_kobras_mercenary_system.txt` with custom localisation.
+- `00_mercenaries.txt` also remains modified.
+- Consolidated direction: retain custom Kobras companies and Vanilla companies specifically unlocked by national content while avoiding an excessive generic pool.
+
+AI AND PERFORMANCE
+------------------
+- `00_ai_personalities.txt` modified in the final build.
+- Consolidated AI direction: Militarist predominant, Diplomat/Capitalist disabled, Colonialist when applicable.
+- Performance/architecture foundation introduced in 1.5 is preserved in 1.6.
+
+DECISIONS AND VANILLA FALLBACK
+------------------------------
+- 42 decision files present in the 1.5 layer are restored to Vanilla content in final 1.6.
+- Another 126 Vanilla decision files are physically materialized as a local baseline.
+- This follows the new policy of keeping physical Vanilla reference files inside the mod without automatically treating them as custom modifications.
+
+OTHER FILES THAT REMAIN MODIFIED
+--------------------------------
+- Theocracy government reforms.
+- Great Projects/Monuments.
+- `zz_group_ideas.txt`.
+- Diplomatic Actions.
+- Mission Modifiers.
+- QoL/Alliance System on_actions and scripted effects.
+- ItalianNation decision has a custom difference from Vanilla.
+- Triggered Modifiers has a custom difference from Vanilla.
+
+VERSION CLOSURE
+---------------
+Kobras 1.6 is the final release of the pre-mission consolidation phase.
+
+From this point forward:
+- v1.6 = closed stable baseline / Pre-Missions Final.
+- v1.7 = new development phase focused on detailed mission-tree reconstruction, one nation at a time, with conceptual design, approval and only then implementation.
