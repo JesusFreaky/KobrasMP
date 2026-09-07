@@ -1,0 +1,28 @@
+#Tröndelag, incl. Trondheim, Frosta, Röros, Steinviksholm
+owner = NOR
+controller = NOR
+add_core = NOR
+culture = norwegian
+religion = catholic
+base_tax = 3
+base_production = 3
+trade_goods = copper
+base_manpower = 2
+capital = "Trondheim"
+is_city = yes
+discovered_by = eastern
+discovered_by = western
+extra_cost = 8
+center_of_trade = 1
+1536.1.1 = { religion = Protestant controller = DAN add_core = DAN }
+1536.1.1 = { owner = DAN controller = DAN add_core = DAN } # 'Handfästningen'(Unknown date)
+1564.3.3 = { controller = SWE }
+1564.5.21 = { controller = DAN }
+1658.2.26 = { controller = SWE add_core = SWE }
+1658.12.1 = { controller = DAN }
+1814.1.14 = { 
+	controller = REB
+	revolt = { type = nationalist_rebels size = 2 }
+}
+1814.5.17 = { controller = NOR revolt = { size = 1 } }
+fort_15th = yes

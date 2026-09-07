@@ -1,0 +1,24 @@
+country_decisions = {
+
+	lit_switch_to_centauros = {
+		major = yes
+		potential = {
+			tag = LIT
+			NOT = { has_country_flag = switched_to_sich_raida }
+		}
+		
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			legitimacy = 90
+			owns_core_province = 466
+		}
+		
+		effect = {
+			set_country_flag = switched_to_sich_raida
+			change_government = republic
+			add_government_reform = cossacks_reform
+		}
+	}
+	
+}

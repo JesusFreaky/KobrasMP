@@ -1,0 +1,20 @@
+kob_bul_balkan_administration = {
+	global_unrest = -1
+	state_maintenance_modifier = -0.10
+}
+
+kob_bul_carpathian_administration = {
+	years_of_nationalism = -2
+	governing_capacity_modifier = 0.10
+}
+
+kob_bul_polish_suzerainty = {
+	diplomatic_reputation = 1
+	diplomatic_upkeep = 1
+}
+
+kob_bul_empire_two_seas_modifier = {
+	governing_capacity_modifier = 0.10
+	global_unrest = -1
+	accepted_culture_threshold = -0.10
+}

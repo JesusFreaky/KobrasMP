@@ -1,0 +1,23 @@
+#Romsdal
+owner = NOR
+controller = NOR
+add_core = NOR
+culture = norwegian
+religion = catholic
+base_tax = 2
+base_production = 2
+trade_goods = fish
+base_manpower = 2
+is_city = yes
+capital = "Molde"
+discovered_by = western
+discovered_by = eastern
+1531.11.5 = { controller = REB revolt = { type = revolutionary_rebels size = 1 } }
+1532.7.15 = { controller = NOR revolt = { size = 1 } }
+1536.1.1 = { religion = Protestant controller = DAN add_core = DAN }
+1536.1.1 = { religion = Protestant controller = DAN add_core = DAN }
+1814.1.14 = { 
+	controller = REB
+	revolt = { type = nationalist_rebels size = 0 }
+}
+1814.5.17 = { controller = NOR revolt = { size = 1 } }

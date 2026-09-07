@@ -1,0 +1,22 @@
+#1820 - Awa
+owner = SMZ
+controller = SMZ
+culture = japanese
+religion = shinto
+capital = "Tokushima"
+trade_goods = cloth
+base_tax = 3
+base_production = 3
+base_manpower = 2
+is_city = yes
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+1542.1.1 = { discovered_by = POR }
+1575.1.1 = { add_core = CSK }
+1580.1.1 = { controller = CSK }
+1585.8.23 = { controller = ODA add_core = ODA }
+1600.10.21 = { controller = TKG add_core = TKG }
+add_core = SMZ

@@ -1,0 +1,31 @@
+#4123 - Birkaland
+owner = SWE
+controller = SWE
+add_core = SWE
+add_core = FIN
+culture = finnish
+religion = catholic
+base_tax = 2
+base_production = 2
+trade_goods = fur
+base_manpower = 2
+capital = "Messukylä"
+is_city = yes
+discovered_by = western
+discovered_by = eastern
+1527.6.1 = { religion = Protestant }
+1596.11.1 = { controller = REB revolt = { type = anti_tax_rebels size = 1 } }
+1597.2.24 = { controller = SWE revolt = { size = 1 } }
+1598.8.1 = { controller = PLC }
+1599.7.15 = { controller = SWE }
+1600.1.1 = { trade_goods = Naval supplies }
+1713.10.6 = { controller = RUS }
+1721.8.30 = { controller = SWE }
+1742.10.30 = { controller = RUS }
+1743.8.7 = { controller = SWE }
+1779.1.1 = { capital = "Tammerfors" }
+1808.2.21 = { controller = RUS }
+1809.9.17 = { 
+	add_core = RUS
+	capital = "Tampere"
+}

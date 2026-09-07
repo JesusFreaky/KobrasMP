@@ -1,0 +1,25 @@
+#4184 - Bizen
+owner = SMZ
+controller = SMZ
+culture = japanese
+religion = shinto
+capital = "Okayama"
+trade_goods = iron
+base_tax = 3
+base_manpower = 2
+base_production = 2
+is_city = yes
+add_core = AKM
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+1468.1.1 = { controller = AKM }
+1520.1.1 = { add_core = AMA }
+1542.1.1 = { discovered_by = POR }
+1552.1.1 = { controller = AMA }
+1566.11.28 = { controller = MRI }
+1578.5.1 = { add_core = ODA controller = ODA }
+1600.10.21 = { add_core = IKE controller = IKE }
+add_core = SMZ

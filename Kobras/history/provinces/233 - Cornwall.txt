@@ -1,0 +1,29 @@
+#233 - Cornwall
+owner = ENG
+controller = ENG
+culture = cornish
+religion = catholic
+base_tax = 2
+base_production = 2
+trade_goods = copper
+base_manpower = 2
+capital = "Penryn"
+is_city = yes
+add_core = ENG
+add_core = CRN
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+1470.9.1 = { controller = REB revolt = { type = revolutionary_rebels size = 2 } }
+1470.10.6 = { controller = ENG revolt = { size = 1 } }
+1540.1.1 = { 
+	fort_16th = yes
+}
+1549.8.17 = { capital = "Falmouth" }
+1575.1.1 = { religion = Protestant }
+1600.1.1 = { religion = Reformed }
+1707.5.12 = { 
+	controller = GBR
+	add_core = GBR
+}

@@ -1,0 +1,35 @@
+owner = BYZ
+controller = BYZ
+culture = greek
+religion = orthodox
+capital = "Agios Georgios"
+trade_goods = wine
+base_tax = 2
+base_production = 1
+base_manpower = 2
+is_city = yes
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+1479.1.24 = { controller = TUR add_core = TUR }
+1500.12.24 = { controller = VEN }
+1503.5.1 = { 
+	add_core = VEN
+}
+1750.1.1 = { add_core = GRE }
+1797.10.17 = { 
+	controller = FRA
+	add_core = FRA
+}
+1799.3.1 = { 
+	controller = CEP
+}
+1807.7.7 = { 
+	controller = FRA
+}
+1815.11.5 = { 
+	controller = GBR
+	add_core = GBR
+}
+add_core = BYZ

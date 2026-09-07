@@ -1,0 +1,520 @@
+# ============================================================================
+# KobrasMP 1.6 - Scalable Mercenary System
+# Architecture inspired by Zlewikk/MJL, rebuilt as static company templates.
+# No monthly toggle/polling events are required.
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# COMPLETE GENERAL-PURPOSE COMPANIES
+# These are deliberately usable without Mercenary Ideas. Cavalry is kept light
+# so the companies remain safe for ordinary cavalry/infantry ratios.
+# ----------------------------------------------------------------------------
+
+kobras_tiny_company = { # 6 INF = 6
+    max_size = 6
+    min_size = 6
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 0.90
+    cavalry_weight = 0
+    cavalry_cap = 0
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+        NOT = { any_hired_mercenary_company = { template = kobras_tiny_company } }
+    }
+}
+
+kobras_small_company = { # 8 INF + 2 CAV = 10
+    max_size = 10
+    min_size = 10
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 0.95
+    cavalry_weight = 0.20
+    cavalry_cap = 2
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+        NOT = { any_hired_mercenary_company = { template = kobras_small_company } }
+    }
+}
+
+kobras_medium_company = { # 12 INF + 4 CAV = 16
+    max_size = 16
+    min_size = 16
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.00
+    cavalry_weight = 0.25
+    cavalry_cap = 4
+    trigger = {
+        is_subject = no
+        is_allowed_to_recruit_mercenaries = yes
+        NOT = { any_hired_mercenary_company = { template = kobras_medium_company } }
+    }
+}
+
+# Large I: 20 INF + 4 CAV = 24. Early game main field company.
+kobras_large_company_1 = {
+    max_size = 24
+    min_size = 24
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.15
+    cavalry_weight = 0.20
+    cavalry_cap = 4
+    trigger = {
+        is_subject = no
+        is_allowed_to_recruit_mercenaries = yes
+        NOT = { mil_tech = 16 }
+        NOT = { any_hired_mercenary_company = { template = kobras_large_company_1 } }
+    }
+}
+
+# Large II: 26 INF + 4 CAV = 30. Matches the 30-width era.
+kobras_large_company_2 = {
+    max_size = 30
+    min_size = 30
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.25
+    cavalry_weight = 0.15
+    cavalry_cap = 4
+    trigger = {
+        is_subject = no
+        is_allowed_to_recruit_mercenaries = yes
+        mil_tech = 16
+        NOT = { mil_tech = 22 }
+        NOT = { any_hired_mercenary_company = { template = kobras_large_company_1 } }
+        NOT = { any_hired_mercenary_company = { template = kobras_large_company_2 } }
+    }
+    modifier = { reinforce_speed = 0.05 }
+}
+
+# Large III: 32 INF + 4 CAV = 36. Matches the 36-width era.
+kobras_large_company_3 = {
+    max_size = 36
+    min_size = 36
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.30
+    cavalry_weight = 0.125
+    cavalry_cap = 4
+    trigger = {
+        is_subject = no
+        is_allowed_to_recruit_mercenaries = yes
+        mil_tech = 22
+        NOT = { mil_tech = 26 }
+        NOT = { any_hired_mercenary_company = { template = kobras_large_company_2 } }
+        NOT = { any_hired_mercenary_company = { template = kobras_large_company_3 } }
+    }
+    modifier = { reinforce_speed = 0.05 }
+}
+
+# Grand: 36 INF + 4 CAV = 40. Full late-game frontline.
+kobras_grand_company = {
+    max_size = 40
+    min_size = 40
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.35
+    cavalry_weight = 0.11
+    cavalry_cap = 4
+    trigger = {
+        is_subject = no
+        is_allowed_to_recruit_mercenaries = yes
+        mil_tech = 26
+        NOT = { any_hired_mercenary_company = { template = kobras_large_company_3 } }
+        NOT = { any_hired_mercenary_company = { template = kobras_grand_company } }
+    }
+    modifier = { reinforce_speed = 0.10 }
+}
+
+# Mercenary Ideas unlock one additional large field company of the current era.
+kobras_large_company_extra_1 = {
+    max_size = 24
+    min_size = 24
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.15
+    cavalry_weight = 0.20
+    cavalry_cap = 4
+    trigger = {
+        is_subject = no
+        is_allowed_to_recruit_mercenaries = yes
+        full_idea_group = mercenary_ideas
+        NOT = { mil_tech = 16 }
+        NOT = { any_hired_mercenary_company = { template = kobras_large_company_extra_1 } }
+    }
+}
+
+kobras_large_company_extra_2 = {
+    max_size = 30
+    min_size = 30
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.25
+    cavalry_weight = 0.15
+    cavalry_cap = 4
+    trigger = {
+        is_subject = no
+        is_allowed_to_recruit_mercenaries = yes
+        full_idea_group = mercenary_ideas
+        mil_tech = 16
+        NOT = { mil_tech = 22 }
+        NOT = { any_hired_mercenary_company = { template = kobras_large_company_extra_1 } }
+        NOT = { any_hired_mercenary_company = { template = kobras_large_company_extra_2 } }
+    }
+    modifier = { reinforce_speed = 0.05 }
+}
+
+kobras_large_company_extra_3 = {
+    max_size = 36
+    min_size = 36
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.30
+    cavalry_weight = 0.125
+    cavalry_cap = 4
+    trigger = {
+        is_subject = no
+        is_allowed_to_recruit_mercenaries = yes
+        full_idea_group = mercenary_ideas
+        mil_tech = 22
+        NOT = { mil_tech = 26 }
+        NOT = { any_hired_mercenary_company = { template = kobras_large_company_extra_2 } }
+        NOT = { any_hired_mercenary_company = { template = kobras_large_company_extra_3 } }
+    }
+    modifier = { reinforce_speed = 0.05 }
+}
+
+kobras_grand_company_extra = {
+    max_size = 40
+    min_size = 40
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.35
+    cavalry_weight = 0.11
+    cavalry_cap = 4
+    trigger = {
+        is_subject = no
+        is_allowed_to_recruit_mercenaries = yes
+        full_idea_group = mercenary_ideas
+        mil_tech = 26
+        NOT = { any_hired_mercenary_company = { template = kobras_large_company_extra_3 } }
+        NOT = { any_hired_mercenary_company = { template = kobras_grand_company_extra } }
+    }
+    modifier = { reinforce_speed = 0.10 }
+}
+
+# ----------------------------------------------------------------------------
+# SPECIALIST CAVALRY COMPANIES
+# ----------------------------------------------------------------------------
+
+kobras_cavalry_company_1 = {
+    max_size = 6
+    min_size = 6
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.10
+    cavalry_weight = 1
+    cavalry_cap = 6
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+        NOT = { mil_tech = 8 }
+        NOT = { any_hired_mercenary_company = { template = kobras_cavalry_company_1 } }
+    }
+    modifier = { cav_to_inf_ratio = 0.5 }
+}
+
+kobras_cavalry_company_2 = {
+    max_size = 8
+    min_size = 8
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.15
+    cavalry_weight = 1
+    cavalry_cap = 8
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+        mil_tech = 8
+        NOT = { mil_tech = 14 }
+        NOT = { any_hired_mercenary_company = { template = kobras_cavalry_company_1 } }
+        NOT = { any_hired_mercenary_company = { template = kobras_cavalry_company_2 } }
+    }
+    modifier = { cav_to_inf_ratio = 0.5 }
+}
+
+kobras_cavalry_company_3 = {
+    max_size = 10
+    min_size = 10
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.20
+    cavalry_weight = 1
+    cavalry_cap = 10
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+        mil_tech = 14
+        NOT = { mil_tech = 18 }
+        NOT = { any_hired_mercenary_company = { template = kobras_cavalry_company_2 } }
+        NOT = { any_hired_mercenary_company = { template = kobras_cavalry_company_3 } }
+    }
+    modifier = { cav_to_inf_ratio = 0.5 }
+}
+
+kobras_cavalry_company_4 = {
+    max_size = 12
+    min_size = 12
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.25
+    cavalry_weight = 1
+    cavalry_cap = 12
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+        mil_tech = 18
+        NOT = { mil_tech = 23 }
+        NOT = { any_hired_mercenary_company = { template = kobras_cavalry_company_3 } }
+        NOT = { any_hired_mercenary_company = { template = kobras_cavalry_company_4 } }
+    }
+    modifier = { cav_to_inf_ratio = 0.5 }
+}
+
+kobras_cavalry_company_5 = {
+    max_size = 16
+    min_size = 16
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.30
+    cavalry_weight = 1
+    cavalry_cap = 16
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+        mil_tech = 23
+        NOT = { any_hired_mercenary_company = { template = kobras_cavalry_company_4 } }
+        NOT = { any_hired_mercenary_company = { template = kobras_cavalry_company_5 } }
+    }
+    modifier = { cav_to_inf_ratio = 0.5 }
+}
+
+# ----------------------------------------------------------------------------
+# SIEGE ARTILLERY COMPANIES
+# Sizes correspond to the artillery required for the maximum +5 artillery
+# siege bonus against the contemporary standard fort: 10 / 20 / 30 / 40.
+# ----------------------------------------------------------------------------
+
+kobras_siege_company_1 = {
+    max_size = 10
+    min_size = 10
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.05
+    artillery_weight = 1
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+        mil_tech = 7
+        NOT = { mil_tech = 14 }
+        NOT = { any_hired_mercenary_company = { template = kobras_siege_company_1 } }
+    }
+}
+
+kobras_siege_company_2 = {
+    max_size = 15
+    min_size = 15
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.10
+    artillery_weight = 1
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+        mil_tech = 14
+        NOT = { mil_tech = 19 }
+        NOT = { any_hired_mercenary_company = { template = kobras_siege_company_1 } }
+        NOT = { any_hired_mercenary_company = { template = kobras_siege_company_2 } }
+    }
+}
+
+kobras_siege_company_3 = {
+    max_size = 20
+    min_size = 20
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.15
+    artillery_weight = 1
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+        mil_tech = 19
+        NOT = { mil_tech = 24 }
+        NOT = { any_hired_mercenary_company = { template = kobras_siege_company_2 } }
+        NOT = { any_hired_mercenary_company = { template = kobras_siege_company_3 } }
+    }
+}
+
+kobras_siege_company_4 = {
+    max_size = 25
+    min_size = 25
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.20
+    artillery_weight = 1
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+        mil_tech = 24
+        NOT = { any_hired_mercenary_company = { template = kobras_siege_company_3 } }
+        NOT = { any_hired_mercenary_company = { template = kobras_siege_company_4 } }
+    }
+}
+
+# ----------------------------------------------------------------------------
+# BATTLE ARTILLERY COMPANIES - MERCENARY IDEAS PAYOFF
+# Back-row packages. The first tier is intentionally only 16 artillery so the
+# concept is economically usable when cannons first matter.
+# ----------------------------------------------------------------------------
+
+kobras_battle_company_1 = {
+    max_size = 16
+    min_size = 16
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.30
+    artillery_weight = 1
+    trigger = {
+        is_subject = no
+        is_allowed_to_recruit_mercenaries = yes
+        mil_tech = 7
+        NOT = { mil_tech = 9 }
+        full_idea_group = mercenary_ideas
+        NOT = { any_hired_mercenary_company = { template = kobras_battle_company_1 } }
+    }
+}
+
+kobras_battle_company_2 = {
+    max_size = 24
+    min_size = 24
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.35
+    artillery_weight = 1
+    trigger = {
+        is_subject = no
+        is_allowed_to_recruit_mercenaries = yes
+        mil_tech = 9
+        NOT = { mil_tech = 16 }
+        full_idea_group = mercenary_ideas
+        NOT = { any_hired_mercenary_company = { template = kobras_battle_company_1 } }
+        NOT = { any_hired_mercenary_company = { template = kobras_battle_company_2 } }
+    }
+}
+
+kobras_battle_company_3 = {
+    max_size = 30
+    min_size = 30
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.40
+    artillery_weight = 1
+    trigger = {
+        is_subject = no
+        is_allowed_to_recruit_mercenaries = yes
+        mil_tech = 16
+        NOT = { mil_tech = 20 }
+        full_idea_group = mercenary_ideas
+        NOT = { any_hired_mercenary_company = { template = kobras_battle_company_2 } }
+        NOT = { any_hired_mercenary_company = { template = kobras_battle_company_3 } }
+    }
+}
+
+kobras_battle_company_4 = {
+    max_size = 34
+    min_size = 34
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.45
+    artillery_weight = 1
+    trigger = {
+        is_subject = no
+        is_allowed_to_recruit_mercenaries = yes
+        mil_tech = 20
+        NOT = { mil_tech = 26 }
+        full_idea_group = mercenary_ideas
+        NOT = { any_hired_mercenary_company = { template = kobras_battle_company_3 } }
+        NOT = { any_hired_mercenary_company = { template = kobras_battle_company_4 } }
+    }
+}
+
+kobras_battle_company_5 = {
+    max_size = 40
+    min_size = 40
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.50
+    artillery_weight = 1
+    trigger = {
+        is_subject = no
+        is_allowed_to_recruit_mercenaries = yes
+        mil_tech = 26
+        full_idea_group = mercenary_ideas
+        NOT = { any_hired_mercenary_company = { template = kobras_battle_company_4 } }
+        NOT = { any_hired_mercenary_company = { template = kobras_battle_company_5 } }
+    }
+}
+
+# ----------------------------------------------------------------------------
+# PROFESSIONAL MERCENARY ARMIES - COMPLETE MERCENARY IDEAS
+# Full pre-built army: frontline + four cavalry + artillery back row.
+# Extremely expensive by design. Mercenary Ideas' allow_mercenaries_to_split
+# lets specialists reorganise/merge these armies where desired.
+# ----------------------------------------------------------------------------
+
+kobras_professional_company_1 = { # 20 INF + 4 CAV + 16 ART = 40
+    max_size = 40
+    min_size = 40
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.60
+    cavalry_weight = 0.10
+    cavalry_cap = 4
+    artillery_weight = 0.40
+    trigger = {
+        is_subject = no
+        is_allowed_to_recruit_mercenaries = yes
+        mil_tech = 7
+        NOT = { mil_tech = 16 }
+        full_idea_group = mercenary_ideas
+        NOT = { any_hired_mercenary_company = { template = kobras_professional_company_1 } }
+    }
+    modifier = { reinforce_speed = 0.10 recover_army_morale_speed = 0.05 }
+}
+
+kobras_professional_company_2 = { # 26 INF + 4 CAV + 30 ART = 60
+    max_size = 60
+    min_size = 60
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.70
+    cavalry_weight = 0.0667
+    cavalry_cap = 4
+    artillery_weight = 0.50
+    trigger = {
+        is_subject = no
+        is_allowed_to_recruit_mercenaries = yes
+        mil_tech = 16
+        NOT = { mil_tech = 22 }
+        full_idea_group = mercenary_ideas
+        NOT = { any_hired_mercenary_company = { template = kobras_professional_company_1 } }
+        NOT = { any_hired_mercenary_company = { template = kobras_professional_company_2 } }
+    }
+    modifier = { reinforce_speed = 0.10 recover_army_morale_speed = 0.05 }
+}
+
+kobras_professional_company_3 = { # ~32 INF + 4 CAV + 34 ART = 70
+    max_size = 70
+    min_size = 70
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.80
+    cavalry_weight = 0.0572
+    cavalry_cap = 4
+    artillery_weight = 0.4857
+    trigger = {
+        is_subject = no
+        is_allowed_to_recruit_mercenaries = yes
+        mil_tech = 22
+        NOT = { mil_tech = 26 }
+        full_idea_group = mercenary_ideas
+        NOT = { any_hired_mercenary_company = { template = kobras_professional_company_2 } }
+        NOT = { any_hired_mercenary_company = { template = kobras_professional_company_3 } }
+    }
+    modifier = { reinforce_speed = 0.15 recover_army_morale_speed = 0.10 }
+}
+
+kobras_professional_company_4 = { # 36 INF + 4 CAV + 40 ART = 80
+    max_size = 80
+    min_size = 80
+    no_additional_manpower_from_max_size = yes
+    cost_modifier = 1.90
+    cavalry_weight = 0.05
+    cavalry_cap = 4
+    artillery_weight = 0.50
+    trigger = {
+        is_subject = no
+        is_allowed_to_recruit_mercenaries = yes
+        mil_tech = 26
+        full_idea_group = mercenary_ideas
+        NOT = { any_hired_mercenary_company = { template = kobras_professional_company_3 } }
+        NOT = { any_hired_mercenary_company = { template = kobras_professional_company_4 } }
+    }
+    modifier = { reinforce_speed = 0.15 recover_army_morale_speed = 0.10 }
+}

@@ -1,0 +1,19 @@
+#1153 - Pindinga
+owner = OYO
+controller = OYO
+is_city = yes
+culture = hausa
+religion = shamanism#Fetishism
+capital = "Lafia"
+native_size = 40
+base_manpower = 2
+trade_goods = livestock
+base_tax = 2
+base_production = 2
+discovered_by = sub_saharan
+1804.1.1 = { discovered_by = SOK }
+1807.1.1 = { 
+	controller = SOK
+	add_core = SOK
+}
+add_core = OYO

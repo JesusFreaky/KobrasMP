@@ -1,0 +1,24 @@
+#1203 - Malindi
+owner = ZAN
+controller = ZAN
+culture = swahili
+religion = sunni
+capital = "Malindi"
+is_city = yes
+base_manpower = 2
+trade_goods = iron
+base_tax = 4
+base_production = 4
+discovered_by = east_african
+discovered_by = indian
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = central_african
+extra_cost = 8
+center_of_trade = 1
+1498.4.16 = { discovered_by = POR }
+1600.1.1 = { discovered_by = TUR }
+1650.1.1 = { trade_goods = Grain }
+1729.10.1 = { discovered_by = OMA controller = OMA }
+1746.1.1 = { controller = MBA add_core = MBA }
+add_core = ZAN

@@ -1,0 +1,23 @@
+#315 - Finnmark
+owner = NOR
+controller = NOR
+add_core = SMI
+culture = sapmi
+religion = catholic
+base_tax = 2
+base_production = 1
+base_manpower = 1
+trade_goods = fish
+capital = "Vardø"
+is_city = yes
+add_core = NOR
+add_local_autonomy = 70
+discovered_by = eastern
+discovered_by = western
+1450.1.1 = { culture = norwegian }
+1536.1.1 = { religion = Protestant controller = DAN add_core = DAN }
+1814.1.14 = { 
+	controller = REB
+	revolt = { type = nationalist_rebels size = 0 }
+}
+1814.5.17 = { controller = NOR revolt = { size = 1 } }

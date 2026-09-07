@@ -1,0 +1,33 @@
+#596 - Malacca
+owner = MLC
+controller = MLC
+culture = malayan
+religion = sunni
+capital = "Malacca"
+trade_goods = spices
+base_tax = 7
+base_production = 7
+base_manpower = 3
+is_city = yes
+add_core = MLC
+discovered_by = chinese
+discovered_by = indian
+discovered_by = muslim
+discovered_by = ottoman
+extra_cost = 16
+center_of_trade = 2
+1509.1.1 = { discovered_by = POR }
+1511.9.10 = { 
+	controller = POR
+}
+1519.1.1 = { fort_15th = yes }
+1536.9.10 = { add_core = POR }
+1641.1.14 = { 
+	controller = NED
+	add_core = NED
+}
+1795.1.1 = { 
+	controller = GBR
+	fort_15th = no
+}
+1820.1.1 = { add_core = GBR }

@@ -1,0 +1,23 @@
+#4651 - Tsushima
+owner = SMZ
+controller = SMZ
+culture = kyushuan
+religion = shinto
+capital = "Tsushima"
+trade_goods = chinaware
+base_tax = 2
+base_manpower = 1
+base_production = 1
+is_city = yes
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+1542.1.1 = { discovered_by = POR }
+1550.1.1 = { add_core = OTM }
+1557.4.3 = { controller = OTM }
+1584.3.1 = { add_core = SMZ controller = SMZ }
+1587.5.15 = { add_core = MRI controller = MRI }
+1600.10.21 = { add_core = TKG controller = TKG }
+add_core = SMZ

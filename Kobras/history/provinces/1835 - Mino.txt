@@ -1,0 +1,24 @@
+#1835 - Mino
+owner = ASK
+controller = ASK
+culture = togoku
+religion = shinto
+capital = "Inabayama"
+trade_goods = paper
+base_tax = 4
+base_manpower = 3
+base_production = 4
+is_city = yes
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+discovered_by = ANU
+#1440.1.1 = { fort_15th = yes } # Inabayama (later Gifu) Castle, Estimation
+1542.1.1 = { discovered_by = POR }
+1567.10.1 = { controller = ODA capital = "Gifu" }
+1567.10.1 = { capital = "Gifu" } # Oda Nobunaga changed the name of city.
+1600.10.21 = { controller = TKG add_core = TKG fort_15th = no }
+add_core = ASK
+fort_15th = yes

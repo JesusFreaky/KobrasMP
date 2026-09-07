@@ -1,0 +1,34 @@
+#583 - Hsenwi
+owner = HSE
+controller = HSE
+culture = shan
+religion = buddhism
+capital = "Hsenwi"
+trade_goods = tropical_wood
+base_tax = 3
+base_production = 3
+base_manpower = 3
+is_city = yes
+add_core = HSE
+discovered_by = chinese
+discovered_by = indian
+1502.1.1 = { 
+	controller = SST
+	add_core = SST
+}
+1554.1.1 = { add_core = TAU }
+1558.7.26 = { controller = TAU }
+1599.1.1 = { 
+	controller = SST
+}
+1605.1.1 = { 
+	controller = TAU
+}
+1655.1.1 = { discovered_by = SPA }
+1732.1.1 = { 
+	controller = QNG
+	add_core = QNG
+}
+1769.12.13 = { 
+	controller = TAU
+}

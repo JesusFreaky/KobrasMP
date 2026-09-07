@@ -1,0 +1,41 @@
+#1247 - Corsica
+owner = COR
+controller = COR
+culture = sardinian
+religion = catholic
+capital = "Bastia"
+hre = yes
+base_tax = 3
+base_production = 3
+trade_goods = naval_supplies
+base_manpower = 2
+is_city = yes
+add_core = COR
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+1464.1.1 = { 
+	controller = MLO
+	add_core = MLO
+}
+1481.1.1 = { controller = REB revolt = { type = revolutionary_rebels size = 2 } }
+1486.1.1 = { controller = MLO revolt = { size = 1 } }
+1495.1.1 = { hre = no }
+1499.1.1 = { 
+	controller = GEN
+}
+1553.1.1 = { 
+	controller = FRA
+	add_core = FRA
+}
+1559.1.1 = { 
+	controller = GEN
+}
+1735.1.1 = { controller = REB revolt = { type = nationalist_rebels size = 3 } }
+1736.4.15 = { controller = COR revolt = { size = 1 } }
+1743.1.1 = { controller = GEN }
+1745.1.1 = { controller = REB revolt = { type = nationalist_rebels size = 3 } }
+1753.10.1 = { controller = COR revolt = { size = 1 } }
+1755.7.15 = { controller = REB revolt = { type = nationalist_rebels size = 3 } }
+1769.6.13 = { controller = FRA revolt = { size = 1 } }

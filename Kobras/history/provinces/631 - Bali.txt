@@ -1,0 +1,22 @@
+#631 - Bali
+owner = MAJ
+controller = MAJ
+culture = nusa_tenggara
+religion = hinduism
+capital = "Gianyar"
+trade_goods = cloth
+base_tax = 3
+base_production = 3
+base_manpower = 3
+is_city = yes
+discovered_by = chinese
+discovered_by = indian
+discovered_by = muslim
+discovered_by = ottoman
+1405.1.1 = { discovered_by = MNG }
+1500.1.1 = { 
+	controller = BLI
+}
+1512.1.1 = { discovered_by = POR }
+1597.1.1 = { discovered_by = NED }
+add_core = MAJ

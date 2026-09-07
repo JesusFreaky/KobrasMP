@@ -1,0 +1,18 @@
+#655 - Palawan
+culture = filipino
+religion = sunni
+capital = "Palawan"
+trade_goods = unknown
+base_tax = 3
+base_production = 3
+base_manpower = 2
+is_city = no
+discovered_by = chinese
+add_local_autonomy = 25
+1521.1.1 = { discovered_by = SPA }
+1749.1.1 = { 
+	controller = SPA
+	culture = castillian
+	religion = Catholic
+}
+1774.1.1 = { add_core = SPA }

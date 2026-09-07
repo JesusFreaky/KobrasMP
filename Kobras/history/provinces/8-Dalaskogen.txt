@@ -1,0 +1,25 @@
+#Dalaskogen, northwesten part of Dalarna, including Mora and entire Siljan area.
+add_core = SWE
+owner = SWE
+controller = SWE
+culture = swedish
+religion = catholic
+base_tax = 2
+base_production = 3
+trade_goods = copper
+base_manpower = 3
+capital = "Mora"
+is_city = yes
+discovered_by = eastern
+discovered_by = western
+extra_cost = 10
+add_province_triggered_modifier = stora_kopparberget_modifier
+1434.6.1 = { controller = REB revolt = { type = anti_tax_rebels size = 1 } }
+1436.4.27 = { controller = SWE revolt = { size = 1 } }
+1436.4.28 = { controller = REB revolt = { type = anti_tax_rebels size = 1 } }
+1438.3.1 = { controller = SWE revolt = { size = 1 } }
+1438.10.1 = { controller = REB revolt = { type = anti_tax_rebels size = 1 } }
+1440.9.1 = { controller = SWE revolt = { size = 1 } }
+1448.6.20 = { controller = SWE revolt = { size = 1 } }
+1527.6.1 = { religion = Protestant }
+1617.1.1 = { base_tax = 3 base_production = 3 }

@@ -1,0 +1,25 @@
+# 4747 - Dramburg
+owner = BRA
+controller = BRA
+culture = pommeranian
+religion = catholic
+hre = yes
+base_tax = 3
+base_production = 3
+trade_goods = livestock
+base_manpower = 2
+capital = "Dramburg"
+is_city = yes
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+1453.1.1 = { controller = BRA }
+1536.1.1 = { religion = Protestant }
+1650.1.1 = { culture = prussian }
+1701.1.18 = { 
+	controller = PRU
+	add_core = PRU
+}
+1806.7.12 = { hre = no }
+add_core = BRA

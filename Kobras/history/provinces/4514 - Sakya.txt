@@ -1,0 +1,31 @@
+#4514 - Sakya
+owner = UTS
+controller = UTS
+add_core = UTS
+add_core = PHA
+culture = tibetan
+religion = vajrayana
+capital = "Sakya"
+trade_goods = livestock
+base_tax = 2
+base_production = 2
+base_manpower = 1
+is_city = yes
+discovered_by = chinese
+discovered_by = indian
+discovered_by = nomad_group
+1642.6.1 = { 
+	controller = KSD
+	add_core = KSD
+}
+1717.1.1 = { 
+	controller = ZUN
+}
+1720.1.1 = { 
+	controller = UTS
+}
+1721.1.1 = { discovered_by = SPA }
+1792.11.1 = { 
+	controller = QNG
+	add_core = QNG
+}

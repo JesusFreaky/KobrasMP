@@ -1,0 +1,20 @@
+#4182 - Hizen
+owner = SMZ
+controller = SMZ
+culture = kyushuan
+religion = shinto
+capital = "Nagasaki"
+trade_goods = naval_supplies
+base_tax = 5
+base_manpower = 2
+base_production = 2
+is_city = yes
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+1542.1.1 = { discovered_by = POR }
+1584.5.4 = { add_core = SMZ controller = SMZ }
+1587.5.15 = { controller = SHN }
+add_core = SMZ

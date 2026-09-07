@@ -1,0 +1,28 @@
+#609 - Angkor
+owner = KHM
+controller = KHM
+culture = khmer
+religion = buddhism
+capital = "Angkor"
+trade_goods = tropical_wood
+base_tax = 3
+base_production = 2
+base_manpower = 1
+is_city = yes
+add_core = KHM
+discovered_by = chinese
+discovered_by = indian
+# Devastated by AYU
+1500.1.1 = { religion = Buddhism }
+1535.1.1 = { discovered_by = POR }
+1594.1.1 = { 
+	controller = AYU
+	add_core = AYU
+}
+1600.1.1 = { capital = "Siem Riep" }
+1767.1.1 = { 
+	controller = KHM
+}
+1795.1.1 = { 
+	controller = AYU
+}

@@ -1,0 +1,47 @@
+government = monarchy
+add_government_reform = holy_state_reform
+
+primary_culture = al_suryah_arabic
+religion = catholic
+technology_group = eastern
+capital = 379	# Jerusalem
+
+1430.1.1 = {
+	monarch = {
+		name = "Baldwin"
+		dynasty = "de Lyonnais"
+		birth_date = 1420.1.1
+		culture = al_suryah_arabic
+		adm = 4
+		dip = 3
+		mil = 6
+	}
+}
+
+
+1439.11.11 = {
+	heir = {
+		name = "Amaury"
+		monarch_name = "Amaury I"
+		dynasty = "de Lyonnais"
+		birth_date = 1439.11.11
+		claim = 95
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}
+
+1430.1.1 = {
+	leader = {
+		name = "Hugues de Payens"
+		type = general
+		fire = 4
+		shock = 4
+		manuever = 4
+		siege = 4
+		personality = strict_drillmaster_personality
+	}
+}
+
+

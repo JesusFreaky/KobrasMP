@@ -1,0 +1,27 @@
+#2371 - Song La
+owner = LXA
+controller = LXA
+culture = lao
+religion = buddhism
+capital = "Song La"
+trade_goods = tea
+base_tax = 2
+base_production = 2
+base_manpower = 2
+is_city = yes
+add_core = LXA
+add_core = LUA
+discovered_by = chinese
+discovered_by = indian
+1592.1.1 = { 
+	controller = TOK
+	add_core = TOK
+}
+1655.1.1 = { discovered_by = SPA }
+1786.6.1 = { 
+	controller = DAI
+	add_core = DAI
+}
+1802.7.22 = { 
+	controller = ANN
+}

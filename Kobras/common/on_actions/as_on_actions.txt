@@ -1,0 +1,34 @@
+#When adding effects directly in on_actions always consider if it would be best to do so through a scripted effect. on_actions with a lot of script in them are harder to get an overview of.
+
+# country
+on_startup = {
+	events = {
+		as.1 # Alliance System Initialization 
+	}
+}
+
+# KobrasMP event-driven Alliance System reconciliation
+on_alliance_created = {
+    effect = {
+        if = { limit = { is_player = yes } country_event = { id = as.4 } }
+        FROM = { if = { limit = { is_player = yes } country_event = { id = as.4 } } }
+    }
+}
+on_alliance_broken = {
+    effect = {
+        if = { limit = { is_player = yes } country_event = { id = as.4 } }
+        FROM = { if = { limit = { is_player = yes } country_event = { id = as.4 } } }
+    }
+}
+on_dependency_gained = {
+    effect = {
+        if = { limit = { is_player = yes } country_event = { id = as.4 } }
+        FROM = { if = { limit = { is_player = yes } country_event = { id = as.4 } } }
+    }
+}
+on_dependency_lost = {
+    effect = {
+        if = { limit = { is_player = yes } country_event = { id = as.4 } }
+        FROM = { if = { limit = { is_player = yes } country_event = { id = as.4 } } }
+    }
+}

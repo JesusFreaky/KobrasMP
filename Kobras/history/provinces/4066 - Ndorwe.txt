@@ -1,0 +1,13 @@
+#Ndorwe
+owner = BUG
+controller = BUG
+culture = ganda
+religion = shamanism#Fetishism
+capital = "Nkore"
+trade_goods = grain
+base_tax = 3
+base_production = 3
+base_manpower = 2
+is_city = yes
+discovered_by = central_african
+add_core = BUG

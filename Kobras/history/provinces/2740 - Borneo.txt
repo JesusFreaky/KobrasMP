@@ -1,0 +1,9 @@
+discovered_by = chinese
+add_core = BNJ
+owner = BNJ
+base_tax = 2
+base_manpower = 2
+base_production = 2
+trade_goods = gold
+controller = BNJ
+is_city = yes

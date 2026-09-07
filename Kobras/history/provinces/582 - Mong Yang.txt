@@ -1,0 +1,34 @@
+#582 - Mong Yang
+owner = MKA
+controller = MKA
+culture = shan
+religion = buddhism
+capital = "Mong Yang"
+trade_goods = copper
+base_tax = 3
+base_production = 3
+base_manpower = 3
+is_city = yes
+discovered_by = chinese
+discovered_by = indian
+1502.1.1 = { 
+	controller = SST
+	add_core = SST
+}
+1557.3.6 = { controller = TAU }
+1599.1.1 = { 
+	controller = SST
+}
+1605.1.1 = { 
+	controller = TAU
+	add_core = TAU
+}
+1655.1.1 = { discovered_by = SPA }
+1752.1.1 = { 
+	controller = SST
+}
+1754.1.1 = { 
+	controller = TAU
+}
+add_core = MKA
+fort_15th = yes

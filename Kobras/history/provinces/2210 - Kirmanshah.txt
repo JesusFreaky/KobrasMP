@@ -1,0 +1,42 @@
+#2210 - Kirmanshah
+owner = QOM
+controller = QOM
+culture = luri
+religion = shiite
+capital = "Kirmanshah"
+trade_goods = cloth
+base_tax = 2
+base_production = 2
+base_manpower = 1
+is_city = yes
+add_core = LRI
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = nomad_group
+discovered_by = indian
+1442.1.1 = { 
+	owner = QOM
+	controller = QOM
+}
+1451.1.1 = { 
+	controller = QAR
+	add_core = QAR
+}
+1469.2.4 = { 
+	controller = AKK
+	add_core = AKK
+}
+1496.2.8 = { controller = REB revolt = { type = pretender_rebels name = "Muhammad's Faction" size = 0 leader = "Muhammad Ak Koyunlu" } }
+1501.7.1 = { controller = AKK revolt = { size = 1 } }
+1504.1.1 = { 
+	controller = PER
+	add_core = PER
+}
+1535.1.1 = { controller = TUR }
+1536.1.1 = { controller = PER }
+1587.1.1 = { controller = TUR }
+1590.3.21 = { controller = PER }
+1595.1.1 = { fort_16th = yes }
+1673.1.1 = { discovered_by = ENG }
+1707.5.12 = { discovered_by = GBR }
+add_core = QOM

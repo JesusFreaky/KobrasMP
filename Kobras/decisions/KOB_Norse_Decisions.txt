@@ -1,0 +1,38 @@
+country_decisions = {
+    kob_embrace_norse_faith = {
+        potential = {
+            OR = {
+                tag = DAN
+                tag = SWE
+                tag = NOR
+                tag = SCA
+                tag = GOT
+                tag = ICE
+                tag = FIN
+            }
+            ai = no
+            NOT = { is_year = 1470 }
+            NOT = { religion = norse_pagan_reformed }
+        }
+        allow = {
+            NOT = { is_year = 1470 }
+        }
+        effect = {
+            change_religion = norse_pagan_reformed
+            every_owned_province = {
+                change_religion = norse_pagan_reformed
+            }
+            every_subject_country = {
+                change_religion = norse_pagan_reformed
+                every_owned_province = {
+                    change_religion = norse_pagan_reformed
+                }
+            }
+            add_country_modifier = {
+                name = kob_norse_missionary_momentum
+                duration = 18250
+            }
+        }
+        ai_will_do = { factor = 0 }
+    }
+}

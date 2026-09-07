@@ -1,0 +1,32 @@
+#4118 - Earldom of Desmond
+owner = DMS
+controller = DMS
+culture = irish
+religion = catholic
+base_tax = 2
+base_production = 3
+trade_goods = copper
+base_manpower = 1
+capital = "Cork"
+is_city = yes
+add_core = DMS
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+extra_cost = 8
+center_of_trade = 1
+1583.1.1 = { controller = ENG add_core = ENG }
+1642.1.1 = { controller = REB revolt = { type = nationalist_rebels size = 1 } }
+1642.6.7 = { 
+	controller = IRE
+	add_core = IRE
+	revolt = { size = 1 }
+}
+1650.4.10 = { controller = ENG }
+1689.3.12 = { controller = REB revolt = { type = nationalist_rebels size = 0 } }
+1690.9.15 = { controller = ENG revolt = { size = 1 } }
+1707.5.12 = { 
+	controller = GBR
+	add_core = GBR
+}

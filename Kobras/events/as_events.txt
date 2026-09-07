@@ -1,0 +1,244 @@
+namespace = as
+
+# Initialisation
+country_event = {
+	id = as.1
+	title = as.1.t
+	desc = as.1.d
+	picture = RELIGION_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+	trigger = {
+		always = yes
+	}
+    immediate = {
+        # Config setup
+        every_country = {
+            limit = { is_player = yes }
+            country_event = { id = as.8 }
+        }
+
+        # Rating updater
+        country_event = {
+            id = as.2
+        }
+    }
+	option = {
+		name = as.1.a
+        # Alliance updater
+        every_country = {
+            limit = { is_player = yes }
+            country_event = { id = as.4 }
+        }
+	}
+}
+
+# Global Clock (for updating ratings & costs)
+country_event = {
+    id = as.2
+    title = as.2.t
+    desc = as.2.d
+    picture = RELIGION_eventPicture
+    hidden = yes
+    mean_time_to_happen = {
+        days = 1
+    }
+    trigger = {
+        global_flag_timer = { flag = as_global_timer days = 30 }
+    }
+    option = {
+        name = as.2.a
+
+        reset_global_flag_timer = { flag = as_global_timer }
+
+        if = {
+            limit = {
+                NOT = {
+                    has_global_flag = clock_active
+                }
+            }
+            random_country = {
+                limit = { is_player = yes }
+                country_event = { id = as.3 }
+            }
+        }
+    }
+}
+
+# Actual event that updates ratings & costs (triggered by global clock)
+country_event = {
+    id = as.3
+    title = as.3.t
+    desc = as.3.d
+    picture = RELIGION_eventPicture
+    is_triggered_only = yes
+    hidden = yes
+    trigger = {
+        always = yes
+    }
+    immediate = {
+        set_global_flag = clock_active
+    }
+    option = {
+        name = as.3.a
+        update_ratings = yes
+        update_point_costs = yes
+        clr_global_flag = clock_active
+    }
+}
+
+# Check alliances (fires every 20 days)
+country_event = {
+    id = as.4
+    title = as.4.t
+    desc = as.4.d
+    picture = RELIGION_eventPicture
+    hidden = yes
+    is_triggered_only = yes
+    trigger = { is_player = yes }
+    option = {
+        name = as.4.a
+        update_treaties = yes
+    }
+}
+
+# Breaking Rules
+country_event = {
+    id = as.5
+    title = as.5.t
+    desc = as.5.d
+    picture = RULEBREAK_eventPicture
+    is_triggered_only = yes
+    trigger = {
+        is_player = yes
+    }
+    immediate = {
+        # Notify everyone else
+        if = {
+            limit = {
+                country_flag_timer = { flag = as_notify_timer days = 90 }
+            }
+
+            reset_country_flag_timer = { flag = as_notify_timer }
+
+            every_country = {
+                limit = {
+                    is_player = yes
+                    NOT = { tag = ROOT }
+                    has_country_flag = as_notify
+                }
+                country_event = {
+                    id = as.6
+                }
+            }
+        }
+    }
+    option = {
+        name = as.5.a
+    }
+}
+
+# Notify
+country_event = {
+    id = as.6
+    title = as.6.t
+    desc = as.6.d
+    picture = TEMPORAL_RIFT_eventPicture
+    is_triggered_only = yes
+    trigger = {
+        is_player = yes
+    }
+    option = {
+        name = as.6.a
+    }
+    option = {
+        name = as.6.b
+        clr_country_flag = as_notify
+        set_country_flag = as_notify_switch
+        hidden_effect = {
+            country_event = {
+                id = as.7
+            }
+        }
+    }
+}
+
+# Notify Switch
+country_event = {
+    id = as.7
+    title = as.7.t
+    desc = as.7.d
+    picture = TEMPORAL_RIFT_eventPicture
+    is_triggered_only = yes
+    hidden = yes
+    trigger = {
+        always = yes
+    }
+    option = {
+        name = as.7.a
+        clr_country_flag = as_notify_switch
+    }
+}
+
+# Config - CONFIG VERSION IN TRIGGER AND EFFECT MUST BE THE SAME
+country_event = {
+    id = as.8
+    title = as.8.t
+    desc = as.8.d
+    picture = TEMPORAL_RIFT_eventPicture
+    hidden = yes
+    trigger = {
+        is_player = yes
+        NOT = {
+            is_variable_equal = { which = as_config_version value = 1 } # <--- CONFIG VERSION
+        }
+    }
+    immediate = {
+        as_config = {
+            # Config version - increment value everytime you update the config
+            # This will force the game to update the config for all nations on saves with old configs.
+            # Also used to check if new tags have been added to the game that need a config.
+            config_version = 1 # <--- CONFIG VERSION
+
+            # Base alliance points each player receives
+            base_points = 11
+
+            # HRE Emperor cost addition (before 1470) !!! NOT WORKING !!!
+            hre_emperor_cost = 0
+
+            # Point cost per power rating
+            great_power_cost = 6
+            major_power_cost = 5
+            prominent_power_cost = 4
+            notable_power_cost = 3
+            minor_power_cost = 2
+            puny_power_cost = 1
+
+            # Each power status is a percentage of the top rating in the world
+            # If a country is above this percentage, they are considered have that power status
+            great_power_percentage = 0.8
+            major_power_percentage = 0.65
+            prominent_power_percentage = 0.45
+            notable_power_percentage = 0.25
+            minor_power_percentage = 0.05
+            puny_power_percentage = 0
+	    }
+    }
+    option = {
+        name = as.8.a
+    }
+}
+
+
+# Rare player reconciliation failsafe
+country_event = {
+    id = as.9
+    title = as.9.t
+    desc = as.9.d
+    picture = RELIGION_eventPicture
+    hidden = yes
+    mean_time_to_happen = { days = 90 }
+    trigger = { is_player = yes }
+    option = { name = as.9.a update_treaties = yes }
+}

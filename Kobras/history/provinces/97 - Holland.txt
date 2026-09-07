@@ -1,0 +1,36 @@
+# 97 - North Holland - Principal cities: Amsterdam, Haarlem
+owner = HOL
+controller = HOL
+add_core = HOL
+capital = "Amsterdam"
+is_city = yes
+culture = dutch
+religion = catholic
+hre = yes
+base_tax = 7
+base_production = 7
+trade_goods = cloth
+base_manpower = 5
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+extra_cost = 16
+center_of_trade = 2
+1477.1.5 = { controller = HAB add_core = HAB }
+1519.1.12 = { controller = SPA add_core = SPA }
+1549.11.4 = { controller = NED add_core = NED }
+1572.1.1 = { religion = Reformed }
+1585.9.1 = { base_production = 10 }
+1590.1.1 = { base_manpower = 7 }
+1648.10.24 = { hre = no }
+1681.1.1 = { base_tax = 14 base_production = 14 }
+1786.5.1 = { controller = REB revolt = { type = nationalist_rebels size = 2 } }
+1786.10.13 = { controller = NED revolt = { size = 1 } }
+1810.7.10 = { 
+	controller = FRA
+	add_core = FRA
+}
+1813.11.30 = { 
+	controller = NED
+}

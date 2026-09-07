@@ -1,0 +1,237 @@
+mod_ideas_adm_modifiers = {
+	category = ADM
+	custom_deus_vult = {
+		cb_on_religious_enemies = yes
+		global_missionary_strength = 0.01
+		max_level = 20
+		level_cost_1 = 500
+		level_cost_2 = 1000
+		level_cost_3 = 2000
+		level_cost_4 = 3000
+		level_cost_5 = 4000
+		level_cost_6 = 5000
+		level_cost_7 = 6000
+		level_cost_8 = 7000
+		level_cost_9 = 8000
+		level_cost_10 = 10000
+		level_cost_11 = 10000
+		level_cost_12 = 10000
+		level_cost_13 = 10000
+		level_cost_14 = 10000
+		level_cost_15 = 10000
+		level_cost_16 = 10000
+		level_cost_17 = 10000
+		level_cost_18 = 10000
+		level_cost_19 = 10000
+		level_cost_20 = 10000
+		chance = {
+			factor = 1
+			modifier = {
+				factor = 1.25
+				dominant_religion = ROOT
+			}
+		}
+	}
+	custom_royal_society = {
+	country_admin_power = 1
+	country_diplomatic_power = 1
+	country_military_power = 1
+	#max_level = 25
+	}
+	
+	custom_secured_legitimacy = {
+	legitimacy = 0.5
+	devotion = 1
+	republican_tradition = 0.5
+	horde_unity = 0.5
+	meritocracy = 0.5
+	max_level = 25
+	}
+	
+	custom_architectural_revolution = {
+	build_cost = -0.1
+	build_time = -0.1
+	max_level = 4
+	}
+	
+	custom_extensive_humanism = {
+	tolerance_heretic = 2
+	tolerance_heathen = 2
+	tolerance_own = 1
+	tolerance_of_heretics_capacity = 2
+	tolerance_of_heathens_capacity = 2
+	max_level = 10
+	}
+	
+	custom_well_organized_colonialism = {
+	global_colonial_growth = 15
+	colonist_placement_chance = 0.05
+	native_assimilation = 0.5
+	native_uprising_chance = -0.5
+	may_explore = yes
+	cb_on_primitives = yes
+	range = 0.15
+	envoy_travel_time = -0.15
+	max_level = 5
+	}
+	
+	custom_puppeteer_of_the_estates = {
+	all_estate_influence_modifier = -0.05
+	all_estate_possible_privileges = 1
+	all_estate_loyalty_equilibrium = 0.05
+	max_level = 10
+	}
+	
+	custom_economy_bundle = {
+	build_cost = -0.10
+	build_time = -0.10
+	inflation_reduction = 0.1
+	global_trade_goods_size_modifier = 0.05
+	global_tax_modifier = 0.1
+	gold_depletion_chance_modifier = -0.1
+	monthly_gold_inflation_modifier = -0.1
+	production_efficiency = 0.1
+	merchants = 1
+	max_level = 25
+	}
+	
+	custom_trade_ideas_set = {
+	global_trade_power = 0.1
+	trade_range_modifier = 0.1
+	trade_efficiency = 0.1
+	mercantilism_cost = -0.1
+	placed_merchant_power = 5
+	global_trade_goods_size_modifier = 0.05
+	merchants = 1
+	trade_steering = 0.1
+	caravan_power = 0.1
+	burghers_loyalty_modifier = 0.1
+	jains_loyalty_modifier = 0.1
+	vaisyas_loyalty_modifier = 0.1
+	max_level = 25
+	}
+	
+	custom_diplomatic_ideas_set = {
+	diplomats = 1
+	dip_advisor_cost = -0.1
+	diplomatic_upkeep = 1
+	improve_relation_modifier = 0.1
+	diplomatic_reputation = 1
+	reduced_stab_impacts = yes
+	max_level = 25
+	}
+	
+	custom_offensive_ideas_set = {
+	leader_land_shock = 1
+	global_regiment_recruit_speed = -0.1
+	leader_land_fire = 1
+	prestige_from_land = 1.0
+	siege_ability = 0.20
+	land_forcelimit_modifier = 0.15
+	special_unit_cost_modifier = -0.2
+	discipline = 0.05
+	}
+	
+	custom_horde_ideas_set = {
+	cavalry_cost = -0.33
+	cav_to_inf_ratio = 0.10
+	leader_land_shock = 1
+	ae_impact = -0.1
+	religious_unity = 0.25
+	land_attrition = -0.2
+	global_unrest = -1
+	horde_unity = 0.5
+	caravan_power = 0.20
+	num_accepted_cultures = 2
+	cavalry_power = 0.25
+	nomadic_tribes_loyalty_modifier = 0.1
+	max_level = 25
+	}
+	
+	custom_innovative_ideas_set = {
+	innovativeness_gain = 0.1
+	technology_cost = -0.05
+	idea_cost = -0.05
+	max_level = 25
+	}
+	
+	
+	
+}
+mod_ideas_dip_modifiers = {
+	category = DIP
+	custom_pirate_raiders = {
+		may_perform_slave_raid_on_same_religion = yes
+		naval_forcelimit_modifier = 0.10
+		max_level = 10
+		level_cost_1 = 200
+		level_cost_2 = 400
+		level_cost_3 = 600
+		level_cost_4 = 800
+		level_cost_5 = 1000
+		level_cost_6 = 1200
+		level_cost_7 = 1400
+		level_cost_8 = 2000
+		level_cost_9 = 2500
+		level_cost_10 = 3000
+		chance = {
+			factor = 0.10
+			modifier = {
+				factor = 0
+				NOT = { num_of_ports = 1 }
+			}
+			modifier = {
+				factor = 5
+				religion = norse_pagan_reformed
+			}
+			modifier = {
+				factor = 6
+				capital_scope = {
+					region = maghreb_region
+				}
+			}
+		}
+		#enabled = {
+			#has_dlc = "Mare Nostrum"
+		#}
+	}
+}
+mod_ideas_mil_modifiers = {
+	category = MIL
+	custom_superior_defensive_tactics = {
+		fire_damage_received = -0.05
+		shock_damage_received = -0.05
+		max_level = 5
+	}
+	custom_superior_offensive_tactics = {
+		fire_damage = 0.05
+		shock_damage = 0.05
+		max_level = 5
+	}
+	custom_professionalized_elite_cavalry = {
+		cavalry_power = 0.05
+		cav_to_inf_ratio = 0.1
+		cavalry_flanking = 0.25
+		max_level = 10
+	}
+	custom_better_logistics_and_planning = {
+		movement_speed = 0.10
+		movement_speed_in_fleet_modifier = 0.5
+		global_supply_limit_modifier = 0.15
+		max_level = 5
+	}
+	custom_cradle_to_the_grave_military_leader_education = {
+		leader_land_manuever = 1
+		leader_land_shock = 1
+		leader_land_fire = 1
+		leader_siege = 1
+		max_level = 4
+	}
+	
+	
+	
+	
+	
+	
+	
+}

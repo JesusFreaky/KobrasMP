@@ -1,0 +1,4 @@
+discovered_by = western
+discovered_by = eastern
+base_manpower = 1
+base_production = 1

@@ -1,0 +1,17 @@
+#Katsekera
+owner = ZIM
+controller = ZIM
+culture = nyasa
+religion = shamanism#Fetishism
+capital = "Katsekera"
+is_city = yes
+base_manpower = 2
+trade_goods = ivory
+base_tax = 2
+base_production = 3
+discovered_by = central_african
+1735.1.1 = { 
+	controller = MKU
+	add_core = MKU
+}
+add_core = ZIM

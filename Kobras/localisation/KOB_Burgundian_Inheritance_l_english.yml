@@ -1,0 +1,7 @@
+﻿l_english:
+ kob_bi.1.t:0 "An Independent Burgundy"
+ kob_bi.1.d:0 "Marie has preserved Burgundy as an independent realm. Vienna must decide whether to accept the settlement or oppose the new balance of power."
+ kob_bi.1.a:0 "Accept Marie's Burgundy"
+ kob_bi.1.b:0 "Contest the settlement"
+ kob_hab_burgundy_friendly:0 "Accepted an Independent Burgundy"
+ kob_hab_burgundy_hostile:0 "Opposed an Independent Burgundy"

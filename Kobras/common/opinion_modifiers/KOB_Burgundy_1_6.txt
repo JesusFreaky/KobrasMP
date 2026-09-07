@@ -1,0 +1,2 @@
+kob_hab_burgundy_friendly = { opinion = 100 years = 20 }
+kob_hab_burgundy_hostile = { opinion = -100 years = 20 }

@@ -1,0 +1,33 @@
+#4377 - Ormond
+owner = DMS
+controller = DMS
+culture = irish
+religion = catholic
+base_tax = 3
+base_production = 3
+trade_goods = livestock
+base_manpower = 1
+capital = "Kilkenny"
+is_city = yes
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+1632.2.24 = { 
+	controller = ENG
+	add_core = ENG
+}
+1642.1.1 = { controller = REB revolt = { type = nationalist_rebels size = 0 } }
+1642.6.7 = { 
+	controller = IRE
+	add_core = IRE
+	revolt = { size = 1 }
+}
+1650.3.28 = { controller = ENG }
+1689.3.12 = { controller = REB revolt = { type = nationalist_rebels size = 2 } }
+1690.8.1 = { controller = ENG revolt = { size = 1 } }
+1707.5.12 = { 
+	controller = GBR
+	add_core = GBR
+}
+add_core = DMS

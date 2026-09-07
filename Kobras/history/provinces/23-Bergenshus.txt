@@ -1,0 +1,25 @@
+#Bergenshus, 
+owner = NOR
+controller = NOR
+add_core = NOR
+culture = norwegian
+religion = catholic
+base_tax = 3
+base_production = 3
+trade_goods = naval_supplies
+base_manpower = 1
+is_city = yes
+capital = "Bergen"
+discovered_by = western
+discovered_by = eastern
+extra_cost = 16
+center_of_trade = 2
+1531.11.5 = { controller = REB revolt = { type = revolutionary_rebels size = 1 } }
+1532.7.15 = { controller = NOR revolt = { size = 1 } }
+1536.1.1 = { religion = Protestant controller = DAN add_core = DAN }
+1536.1.1 = { owner = DAN controller = DAN add_core = DAN } # 'Handfästningen'(Unknown date)
+1814.1.14 = { 
+	controller = REB
+	revolt = { type = nationalist_rebels size = 0 }
+}
+1814.5.17 = { controller = NOR revolt = { size = 1 } }

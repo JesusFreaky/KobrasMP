@@ -1,0 +1,9 @@
+PR_commandant_cooldown = {
+	discipline = 0.001
+}
+PR_grand_captain_cooldown = {
+	land_morale = 0.001
+}
+military_reform_cooldown_modifier = {
+	global_manpower = 0.001
+}

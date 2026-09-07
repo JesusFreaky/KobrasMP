@@ -1,0 +1,42 @@
+# 98 Utrecht - Principal cities: Utrecht
+owner = UTR
+controller = UTR
+capital = "Utrecht"
+is_city = yes
+culture = dutch
+religion = catholic
+hre = yes
+base_tax = 5
+base_production = 5
+trade_goods = cloth
+base_manpower = 2
+add_core = UTR
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+1515.1.5 = { add_core = HAB }
+1528.6.21 = { controller = SPA add_core = SPA }
+1549.11.4 = { controller = NED add_core = NED }
+1572.1.1 = { religion = Reformed }
+1572.6.10 = { controller = REB revolt = { type = nationalist_rebels size = 2 } }
+1579.1.23 = { controller = NED revolt = { size = 1 } }
+1583.1.1 = { fort_15th = no fort_16th = yes }
+1648.10.24 = { hre = no }
+1672.5.25 = { controller = FRA }
+1678.8.10 = { controller = NED }
+1681.1.1 = { 
+	base_tax = 10
+	base_production = 10
+}
+1786.1.1 = { controller = REB revolt = { type = revolutionary_rebels size = 2 } }
+1786.9.13 = { controller = NED revolt = { size = 1 } }
+1810.7.10 = { 
+	controller = FRA
+	add_core = FRA
+}
+1813.11.30 = { 
+	controller = NED
+}
+add_core = HOL
+fort_15th = yes

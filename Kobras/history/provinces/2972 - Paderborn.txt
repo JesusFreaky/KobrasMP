@@ -1,0 +1,38 @@
+#Paderborn
+owner = KOL
+controller = KOL
+culture = hannoverian
+religion = catholic
+trade_goods = wool
+capital = "Paderborn"
+base_tax = 3
+base_production = 3
+base_manpower = 2
+hre = yes
+is_city = yes# Paderborn is through its history dependant on Münster and Köln.
+add_core = KOL
+add_core = PAD
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+1453.1.1 = { add_core = MUN }
+1566.1.1 = { religion = Reformed }
+1568.1.1 = { controller = MUN }
+1574.1.1 = { controller = KOL }
+1585.1.1 = { religion = Catholic }
+1661.1.1 = { controller = MUN }
+1724.1.1 = { controller = KOL }
+1802.1.1 = { 
+	controller = PRU
+	add_core = PRU
+}
+1806.7.12 = { hre = no }
+1806.10.1 = { controller = FRA }
+1807.7.9 = { 
+	controller = WES
+	add_core = WES
+}
+1813.10.13 = { 
+	controller = PRU
+}

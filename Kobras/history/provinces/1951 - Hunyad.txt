@@ -1,0 +1,60 @@
+#1951 - Hunyad
+latent_trade_goods = { 
+	coal 
+}
+owner = HUN
+controller = HUN
+culture = transylvanian
+religion = catholic
+capital = "Alba Iulia"
+trade_goods = iron
+base_tax = 3
+base_production = 3
+base_manpower = 2
+is_city = yes
+add_core = HUN
+add_core = TRA
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+1506.1.1 = { controller = REB revolt = { type = nationalist_rebels size = 2 } }
+1507.1.1 = { controller = HUN revolt = { size = 1 } }
+1514.4.1 = { controller = REB revolt = { type = anti_tax_rebels size = 0 } }
+1514.10.1 = { controller = HUN revolt = { size = 1 } }
+1526.8.30 = { 
+	controller = TRA
+	add_core = HAB
+}
+1528.1.1 = { add_core = TUR }
+1551.7.19 = { 
+	controller = HAB
+}
+1556.10.1 = { controller = TRA }
+1562.1.1 = { controller = REB revolt = { type = nationalist_rebels size = 1 } }
+1563.1.1 = { controller = TRA revolt = { size = 1 } }
+1567.1.1 = { religion = Reformed }
+1599.1.1 = { 
+	controller = WAL
+	add_core = WAL
+}
+1601.1.1 = { 
+	controller = TRA
+}
+1604.1.1 = { controller = HAB }
+1604.10.1 = { controller = REB revolt = { type = nationalist_rebels size = 1 } }
+1606.6.23 = { controller = TRA revolt = { size = 1 } }
+1685.1.1 = { 
+	controller = HAB
+}
+1703.1.1 = { controller = REB revolt = { type = nationalist_rebels size = 1 } }
+1711.1.1 = { controller = HAB revolt = { size = 1 } }
+1744.1.1 = { controller = REB revolt = { type = heretic_rebels size = 2 } }
+1745.1.1 = { controller = HAB revolt = { size = 1 } }
+1784.1.1 = { controller = REB revolt = { type = anti_tax_rebels size = 2 } }
+1785.1.1 = { controller = HAB revolt = { size = 1 } }

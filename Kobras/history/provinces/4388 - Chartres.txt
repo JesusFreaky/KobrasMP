@@ -1,0 +1,30 @@
+# 4388 Chartres
+owner = FRA
+controller = FRA
+capital = "Chartres"
+is_city = yes
+culture = cosmopolitan_french
+religion = catholic
+base_tax = 5
+base_production = 5
+trade_goods = cloth
+base_manpower = 6
+add_core = FRA
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+1420.1.1 = { controller = ENG }
+1437.1.1 = { controller = FRA }
+1583.1.1 = { fort_15th = no fort_16th = yes }
+1648.1.1 = { fort_16th = no fort_17th = yes }
+1648.10.21 = { controller = REB revolt = { type = revolutionary_rebels size = 0 } }
+1649.3.1 = { controller = FRA revolt = { size = 1 } }
+1651.4.1 = { controller = FRA }
+1652.7.2 = { controller = REB revolt = { type = revolutionary_rebels size = 1 } }
+1652.10.21 = { controller = FRA revolt = { size = 1 } }
+1715.1.1 = { fort_17th = no fort_18th = yes }
+1791.6.20 = { 
+	controller = FRA
+	revolt = { size = 1 }
+}

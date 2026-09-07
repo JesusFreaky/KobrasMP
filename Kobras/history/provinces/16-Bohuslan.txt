@@ -1,0 +1,31 @@
+#Bohuslän, contains Marstrand, Uddevalla, Strömstad.
+owner = NOR
+controller = NOR
+add_core = NOR
+culture = norwegian
+religion = catholic
+base_tax = 2
+base_production = 2
+trade_goods = grain
+base_manpower = 2
+capital = "Marstrand"
+is_city = yes
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+1523.3.15 = { controller = SWE }
+1532.5.17 = { controller = NOR }
+1536.1.1 = { 
+	religion = Protestant
+	controller = DAN
+	add_core = DAN
+}
+1658.2.26 = { 
+	controller = SWE
+	add_core = SWE
+}
+1677.11.1 = { controller = DAN }
+1679.8.23 = { controller = SWE }
+1680.1.1 = { culture = swedish }
+1690.1.1 = { capital = "Uddevalla" }

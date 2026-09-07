@@ -1,0 +1,49 @@
+#154 - Hont (Hont + Bars + Ersekujvar)
+owner = HUN
+controller = HUN
+culture = slovak
+religion = catholic
+capital = "Hont"
+trade_goods = gold#Schemnitz / Banská Štiavnica
+base_tax = 4
+base_production = 6
+base_manpower = 4
+is_city = yes
+#fort_15th = yes #Eger Castle, Orava
+add_core = HUN
+add_core = SLO
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+1490.1.1 = { controller = HAB }
+1491.11.7 = { controller = HUN }
+1526.8.30 = { 
+	controller = HAB
+	add_core = HAB
+}
+1545.1.1 = { religion = Protestant }
+1567.1.1 = { religion = Reformed }
+1581.1.1 = { 
+	capital = "Érsekújvár"
+	fort_16th = yes
+}
+1604.1.1 = { controller = REB revolt = { type = nationalist_rebels size = 2 } }
+1606.1.1 = { controller = HAB religion = Reformed revolt = { size = 1 } }
+1619.1.1 = { controller = REB revolt = { type = nationalist_rebels size = 2 } }
+1626.1.1 = { controller = HAB revolt = { size = 1 } }
+1664.8.1 = { 
+	controller = TUR
+	add_core = TUR
+}
+1685.1.1 = { 
+	controller = HAB
+}
+1703.1.1 = { controller = REB revolt = { type = nationalist_rebels size = 2 } }
+1710.1.1 = { revolt = { size = 1 } }
+1711.1.1 = { controller = HAB }

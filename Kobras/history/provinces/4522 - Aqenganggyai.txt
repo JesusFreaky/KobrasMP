@@ -1,0 +1,14 @@
+#4522 - Aqenganggyai #Hoh Xil
+discovered_by = chinese
+discovered_by = nomad_group
+discovered_by = indian
+add_core = KAM
+owner = KAM
+base_tax = 1
+base_manpower = 1
+base_production = 1
+culture = tibetan
+trade_goods = iron
+religion = vajrayana
+controller = KAM
+is_city = no

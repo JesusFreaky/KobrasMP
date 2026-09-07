@@ -1,0 +1,40 @@
+#1022 - Indrapura
+owner = CHA
+controller = CHA
+culture = cham
+religion = mahayana
+capital = "Indrapura"
+trade_goods = incense
+base_tax = 4
+base_production = 4
+base_manpower = 2
+is_city = yes
+add_core = CHA
+add_core = ANN
+discovered_by = chinese
+discovered_by = indian
+discovered_by = muslim
+discovered_by = ottoman
+1407.3.1 = { 
+	owner = DAI
+	controller = DAI
+	add_core = DAI
+}
+1527.1.1 = { 
+	controller = TOK
+	add_core = TOK
+}
+1535.1.1 = { discovered_by = POR }
+1558.1.1 = { 
+	controller = ANN
+}
+1600.1.1 = { 
+	religion = Buddhism
+	culture = vietnamese
+}
+1776.1.1 = { 
+	controller = DAI
+}
+1802.7.22 = { 
+	controller = ANN
+}

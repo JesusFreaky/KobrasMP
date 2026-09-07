@@ -1,0 +1,7 @@
+kob_ser_novo_brdo_goods = {
+	trade_goods_size = 1
+}
+
+kob_ser_fortress_of_belgrade = {
+	defensiveness = 0.15
+}

@@ -1,0 +1,46 @@
+#429 - Isfahan
+owner = TIM
+controller = TIM
+culture = persian
+religion = shiite
+capital = "Esfahan"
+trade_goods = paper
+base_tax = 4
+base_production = 4
+base_manpower = 3
+is_city = yes
+add_core = ISF
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = indian
+discovered_by = nomad_group
+extra_cost = 16
+center_of_trade = 2
+1442.1.1 = { 
+	owner = QOM
+	controller = QOM
+	add_core = QOM
+}
+1449.1.1 = { 
+	controller = QAR
+	add_core = QAR
+}
+1468.6.1 = { controller = TIM }
+1469.2.4 = { controller = AKK add_core = AKK }
+1496.2.8 = { controller = REB revolt = { type = pretender_rebels name = "Muhammad's Faction" size = 0 leader = "Muhammad Ak Koyunlu" } }
+1500.1.1 = { discovered_by = TUR }
+1501.7.1 = { 
+	controller = AKK
+	revolt = { size = 1 }
+}
+1504.1.1 = { 
+	controller = PER
+	add_core = PER
+}
+1532.1.1 = { 
+	religion = Shiite
+}
+1580.1.1 = { fort_15th = yes }
+1650.1.1 = { trade_goods = Spices }
+1673.1.1 = { discovered_by = ENG }
+1707.5.12 = { discovered_by = GBR }

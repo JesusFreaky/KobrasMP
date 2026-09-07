@@ -1,0 +1,26 @@
+#72 - Breisgau
+owner = TIR
+controller = TIR
+add_core = TIR
+culture = swabian
+religion = catholic
+base_tax = 4
+base_production = 4
+trade_goods = glass
+base_manpower = 3
+capital = "Freiburg"
+is_city = yes
+hre = yes
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+1797.10.17 = { 
+	controller = MOD
+	add_core = MOD
+}
+1805.12.26 = { 
+	controller = BAD
+}
+1806.7.12 = { hre = no }
+fort_15th = yes

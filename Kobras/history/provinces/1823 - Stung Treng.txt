@@ -1,0 +1,28 @@
+#1823 - Stung Treng
+owner = KHM
+controller = KHM
+culture = khmer
+religion = buddhism
+capital = "Stung Treng"
+trade_goods = grain
+base_tax = 3
+base_production = 3
+base_manpower = 2
+is_city = yes
+add_core = KHM
+discovered_by = chinese
+discovered_by = indian
+1535.1.1 = { discovered_by = POR }
+1594.1.1 = { 
+	controller = LXA
+	add_core = LXA
+}
+1694.1.1 = { add_core = ANN }
+1707.1.1 = { 
+	controller = VIE
+	add_core = VIE
+}
+1713.1.1 = { 
+	controller = CHK
+	add_core = CHK
+}

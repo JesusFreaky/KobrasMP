@@ -1,0 +1,23 @@
+# Tunisia and Mzab
+vassal = {
+	first = TUN
+	second = MZB
+	start_date = 1401.1.1
+	end_date = 1500.4.1
+}
+
+# Tunisia and Touggourt
+vassal = {
+	first = TUN
+	second = TGT
+	start_date = 1401.1.1
+	end_date = 1500.4.1
+}
+
+# Tunisia and Ghadames
+vassal = {
+	first = TUN
+	second = GHD
+	start_date = 1401.1.1
+	end_date = 1500.4.1
+}

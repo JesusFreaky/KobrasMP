@@ -1,0 +1,40 @@
+#4436 - Devarakonda
+owner = YOR
+controller = YOR
+culture = telegu
+religion = hinduism
+capital = "Devarakonda"
+trade_goods = iron
+base_tax = 3
+base_production = 3
+base_manpower = 2
+is_city = yes
+add_core = GOC
+add_core = BAH
+add_rajputs_or_marathas_or_nobles_effect = yes
+discovered_by = indian
+discovered_by = nomad_group
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = chinese
+1452.1.1 = { 
+	add_core = ORI
+	controller = ORI
+}
+1468.1.1 = { 
+	controller = BAH
+	revolt = { size = 1 }
+}
+1490.1.1 = { 
+	controller = GOC
+}
+1498.1.1 = { discovered_by = POR }
+1686.1.1 = { controller = MUG }
+1687.1.1 = { 
+	add_core = MUG
+}
+1712.1.1 = { add_core = DEC }
+1724.1.1 = { 
+	controller = DEC
+}
+add_core = YOR

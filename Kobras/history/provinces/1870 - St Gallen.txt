@@ -1,0 +1,19 @@
+#1870 - St Gallen
+owner = SWI
+controller = SWI
+culture = swiss
+religion = catholic
+capital = "St Gallen"
+trade_goods = livestock
+hre = yes
+base_tax = 5
+base_production = 5
+base_manpower = 3
+is_city = yes
+add_core = SWI
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+1526.1.1 = { religion = Reformed }
+1806.7.12 = { hre = no }

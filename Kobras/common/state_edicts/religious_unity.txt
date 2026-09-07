@@ -1,0 +1,50 @@
+edict_religious_unity = {
+	potential = {
+		always = yes		#we support "potential" if modders want to have lots and just show some.
+	}
+
+	allow = {
+	always = yes
+	custom_trigger_tooltip = {
+		tooltip = qol_remove_state_edicts_flag_tt
+		OR = {
+			NOT = { has_country_flag = qol_state_edicts_clear_flag }
+			had_country_flag = {
+				flag = qol_state_edicts_clear_flag
+				days = 33
+			}
+		}
+	}
+}
+
+	modifier = {
+		local_missionary_strength = 0.015
+	}
+
+	#ROOT - Country, FROM - Province, if all provinces in a state, that are owned by the country,
+	#	meet this requirement, the alert will appear.
+
+	notify_trigger = {
+		FROM = {
+			has_owner_religion = yes
+		}
+	}
+
+	color = { 117 38 143 }
+
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 0
+			all_province_in_state = {
+				has_missionary = no
+			}
+		}
+		modifier = {
+			factor = 3
+			any_province_in_state = {
+				has_missionary = yes
+			}
+		}
+	}
+}

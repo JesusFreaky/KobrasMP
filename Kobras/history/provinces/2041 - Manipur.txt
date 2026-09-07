@@ -1,0 +1,30 @@
+#2041 - Manipur
+owner = KAC
+controller = KAC
+culture = chin
+religion = animism
+capital = "Imphal"
+trade_goods = cloth
+base_tax = 2
+base_production = 2
+base_manpower = 1
+is_city = yes
+discovered_by = indian
+discovered_by = nomad_group
+discovered_by = chinese
+1597.1.1 = { fort_15th = yes }
+1732.1.1 = { 
+	religion = Hinduism
+}
+1758.1.1 = { 
+	controller = TAU
+	add_core = TAU
+}
+1760.1.1 = { discovered_by = GBR }
+1782.1.1 = { 
+	controller = MLB
+}
+1819.1.1 = { 
+	controller = TAU
+}
+add_core = KAC

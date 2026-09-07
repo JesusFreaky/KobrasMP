@@ -1,0 +1,16 @@
+#Kalonga
+owner = ZIM
+controller = ZIM
+culture = nyasa
+religion = shamanism#Fetishism
+capital = "Manthimba"
+is_city = yes
+base_manpower = 4
+trade_goods = iron
+base_tax = 3
+base_production = 3
+discovered_by = central_african
+extra_cost = 16
+center_of_trade = 2
+1572.1.1 = { discovered_by = POR }
+add_core = ZIM

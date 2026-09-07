@@ -1,0 +1,20 @@
+namespace = kob_bi
+country_event = {
+    id = kob_bi.1
+    title = kob_bi.1.t
+    desc = kob_bi.1.d
+    picture = DIPLOMACY_eventPicture
+    is_triggered_only = yes
+    option = {
+        name = kob_bi.1.a
+        if = { limit = { is_rival = BUR } remove_rival = BUR }
+        BUR = { if = { limit = { is_rival = HAB } remove_rival = HAB } }
+        add_opinion = { who = BUR modifier = kob_hab_burgundy_friendly }
+        add_trust = { who = BUR value = 20 }
+    }
+    option = {
+        name = kob_bi.1.b
+        add_opinion = { who = BUR modifier = kob_hab_burgundy_hostile }
+        add_trust = { who = BUR value = -20 }
+    }
+}

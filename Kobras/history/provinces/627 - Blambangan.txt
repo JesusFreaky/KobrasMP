@@ -1,0 +1,25 @@
+#627 - Blambangan
+owner = MAJ
+controller = MAJ
+culture = javanese
+religion = hinduism
+capital = "Blambangan"
+trade_goods = cotton
+base_tax = 4
+base_production = 4
+base_manpower = 3
+is_city = yes
+discovered_by = chinese
+discovered_by = indian
+discovered_by = muslim
+discovered_by = ottoman
+1509.1.1 = { discovered_by = POR }
+1527.1.1 = { 
+	controller = BLM
+}
+1768.1.1 = { 
+	controller = NED
+	add_core = NED
+	capital = "Banyuwangi"
+}
+add_core = MAJ

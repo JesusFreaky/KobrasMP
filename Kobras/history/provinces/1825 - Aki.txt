@@ -1,0 +1,32 @@
+#1825 - Aki
+owner = SMZ
+controller = SMZ
+culture = japanese
+religion = shinto
+capital = "Tomo"
+trade_goods = grain
+base_tax = 4
+base_manpower = 3
+base_production = 4
+is_city = yes
+add_core = MRI
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+1420.1.1 = { add_core = OUC }
+1470.1.1 = { controller = OUC }
+1520.1.1 = { add_core = AMA }
+1525.1.1 = { controller = MRI fort_15th = yes capital = "Koriyama" }
+1525.1.1 = { fort_15th = yes } # Yoshida Koriyama Castle, the capital of the Mori clan
+1525.1.1 = { capital = "Koriyama" }
+1542.1.1 = { discovered_by = POR }
+1599.1.1 = { capital = "Hiroshima" }
+1600.10.21 = { controller = TKG add_core = TKG }
+add_core = OUC
+add_core = OUC
+add_core = OUC
+add_core = OUC
+add_core = OUC
+add_core = SMZ

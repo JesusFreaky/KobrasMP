@@ -1,0 +1,21 @@
+#1830 - Tajima
+owner = ASK
+controller = ASK
+culture = japanese
+religion = shinto
+capital = "Tottori"
+trade_goods = grain
+base_tax = 2
+base_production = 2
+base_manpower = 2
+is_city = yes
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+1542.1.1 = { discovered_by = POR }
+1569.1.1 = { add_core = ODA }
+1580.5.21 = { controller = ODA }
+1600.10.21 = { controller = TKG add_core = TKG }
+add_core = ASK

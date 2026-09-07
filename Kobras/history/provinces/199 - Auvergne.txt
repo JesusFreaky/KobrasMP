@@ -1,0 +1,32 @@
+# 199 Auvergne - Principal cities: Clermont-Ferrand
+latent_trade_goods = { 
+	coal 
+}
+owner = FRA
+controller = FRA
+capital = "Clermont"
+is_city = yes
+culture = occitain
+religion = catholic
+base_tax = 4
+base_production = 4
+trade_goods = iron
+base_manpower = 2
+add_core = AUV
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+1444.1.1 = { 
+	owner = AUV
+	controller = AUV
+}
+1453.1.1 = { add_core = BOU }
+1560.1.1 = { religion = Reformed }
+1589.1.5 = { controller = NAV add_core = NAV }
+1589.8.2 = { controller = FRA add_core = FRA }
+1630.4.15 = { capital = "Clermont-Ferrand" }
+1686.1.17 = { religion = Catholic }
+1702.1.1 = { controller = REB revolt = { type = heretic_rebels size = 2 } }
+1705.1.1 = { controller = FRA revolt = { size = 1 } }
+fort_15th = yes

@@ -1,0 +1,371 @@
+country_decisions = {
+  qol_educate_ruler = {
+  color = { 255  128  0 }
+    potential = {
+      NOT = {
+        government = republic
+      }
+    }
+    ai_will_do = {
+      factor = 0
+    }
+    allow = {
+      ai = no
+      custom_trigger_tooltip = {
+        tooltip = qol_less_than_7_stats_tt
+        OR = {
+          NOT = {
+            adm = 3
+            dip = 3
+            mil = 3
+          }
+          NOT = {
+            adm = 4
+            dip = 1
+            mil = 4
+          }
+          NOT = {
+            adm = 1
+            dip = 4
+            mil = 4
+          }
+          NOT = {
+            adm = 4
+            dip = 4
+            mil = 1
+          }
+          NOT = {
+            adm = 4
+            dip = 2
+            mil = 3
+          }
+          NOT = {
+            adm = 4
+            dip = 3
+            mil = 2
+          }
+          NOT = {
+            adm = 5
+            dip = 1
+            mil = 3
+          }
+          NOT = {
+            adm = 5
+            dip = 3
+            mil = 1
+          }
+          NOT = {
+            adm = 5
+            dip = 2
+            mil = 2
+          }
+          NOT = {
+            adm = 6
+            dip = 1
+            mil = 2
+          }
+          NOT = {
+            adm = 6
+            dip = 2
+            mil = 1
+          }
+          NOT = {
+            dip = 1
+            mil = 1
+          }
+          NOT = {
+            dip = 4
+            adm = 2
+            mil = 3
+          }
+          NOT = {
+            dip = 4
+            adm = 3
+            mil = 2
+          }
+          NOT = {
+            dip = 5
+            dip = 1
+            mil = 3
+          }
+          NOT = {
+            dip = 5
+            adm = 3
+            mil = 1
+          }
+          NOT = {
+            dip = 5
+            adm = 2
+            mil = 2
+          }
+          NOT = {
+            dip = 6
+            adm = 1
+            mil = 2
+          }
+          NOT = {
+            dip = 6
+            adm = 2
+            mil = 1
+          }
+          NOT = {
+            adm = 1
+            mil = 1
+          }
+          NOT = {
+            mil = 4
+            adm = 2
+            dip = 3
+          }
+          NOT = {
+            mil = 4
+            adm = 3
+            dip = 2
+          }
+          NOT = {
+            mil = 5
+            mil = 1
+            dip = 3
+          }
+          NOT = {
+            mil = 5
+            adm = 3
+            dip = 1
+          }
+          NOT = {
+            mil = 5
+            adm = 2
+            dip = 2
+          }
+          NOT = {
+            mil = 6
+            adm = 1
+            dip = 2
+          }
+          NOT = {
+            mil = 6
+            adm = 2
+            dip = 1
+          }
+          NOT = {
+            adm = 1
+            dip = 1
+          }
+        }
+      }
+      NOT = {
+        check_variable = {
+          which = qol_educate_rulers_count
+          value = 2
+        }
+      }
+      custom_trigger_tooltip = {
+        tooltip = qol_cant_educate_same_ruler_tt
+        NOT = { has_ruler_flag = qol_ruler_educated_flag }
+      }
+    }
+    effect = {
+      add_treasury = -100
+      change_adm = 1
+      change_dip = 1
+      change_mil = 1
+      change_variable = {
+        which = qol_educate_rulers_count
+        value = 1
+      }
+      set_ruler_flag = qol_ruler_educated_flag
+  }
+}
+dev_sum_clicks_decision = {
+  major = yes
+  color = { 166  0  0 }
+  potential = {
+    always = yes
+  }
+  ai_will_do = {
+    factor = 0
+  }
+  allow = {
+    custom_trigger_tooltip = {
+      tooltip = dev_sum_clicks_decision_tooltip
+      always = no
+    }
+  }
+  effect = {
+  }
+}
+PR_critical_events = {
+  major = yes
+  color = { 166  0  0 }
+  potential = {
+    ai = no
+  }
+  ai_will_do = {
+    factor = 0
+  }
+  allow = {
+    custom_trigger_tooltip = {
+      tooltip = PR_radical_reform_decision
+      NOT = { has_country_flag = radical_mercantilist_reforms }
+    }
+    custom_trigger_tooltip = {
+      tooltip = PR_military_reform_decision
+      NOT = { has_country_flag = military_reform }
+    }
+    custom_trigger_tooltip = {
+      tooltip = PR_commandant_decision
+      NOT = { has_country_flag = commandant }
+    }
+    custom_trigger_tooltip = {
+      tooltip = PR_grand_captain_decision
+      NOT = { has_country_flag = grand_captain }
+    }
+    always = no
+  }
+  effect = {
+  }
+}
+qol_splendor_into_power = {
+    color = { 255  128  0 }
+    potential = {
+			splendor = 0
+		}
+		allow = {
+			splendor = 800
+		}
+		effect = {
+			add_splendor = -800
+			add_adm_power = 60
+			add_dip_power = 60
+			add_mil_power = 60
+		}
+		ai_will_do = {factor = 1}
+	}
+qol_get_specific_advisor = {
+    color = { 153  0  76 }
+    potential = {
+      ai = no
+      NOT = { has_country_flag = qol_get_specific_advisor_flag }
+    }
+    allow = {
+			OR = {
+				adm_power = 25
+				dip_power = 25
+				mil_power = 25
+			}
+			ai = no
+		}
+    effect = {
+      set_country_flag = qol_get_specific_advisor_flag
+      country_event = { id = qol_advisor_event.0 }
+    }
+    ai_will_do = {
+      factor = 0
+    }
+  }
+qol_clear_specific_building_decision = {
+    color = { 153  0  76 }
+    potential = {
+      ai = no
+      NOT = { has_country_flag = qol_clear_specific_building_flag }
+    }
+    allow = {
+      always = yes
+    }
+    effect = {
+      set_country_flag = qol_clear_specific_building_flag
+      country_event = { id = qol_events.29 }
+      custom_tooltip = qol_clear_specific_building_decision_tt
+    }
+    ai_will_do = {
+      factor = 0
+    }
+  }
+qol_state_edicts_decision = {
+    color = { 153  0  76 }
+    provinces_to_highlight = {
+      has_state_edict_enabled = yes
+      owned_by = ROOT
+    }
+    potential = {
+      ai = no
+      NOT = { has_country_flag = qol_state_edicts_flag }
+      OR = {
+        NOT = { has_country_flag = qol_state_edicts_clear_flag }
+        had_country_flag = {
+          flag = qol_state_edicts_clear_flag
+          days = 33
+        }
+      }
+    }
+    allow = {
+      custom_trigger_tooltip = {
+        tooltip = qol_state_edicts_decision_ttt
+        always = yes
+      }
+    }
+    effect = {
+      set_country_flag = qol_state_edicts_flag
+      country_event = { id = qol_events.28 }
+      custom_tooltip = qol_state_edicts_decision_tt
+    }
+    ai_will_do = {
+      factor = 0
+    }
+  }
+add_all_provinces_to_seats = {
+      color = { 255  128  0 }
+  		potential = {
+  			ai = no
+  			has_parliament = yes
+  		}
+  		allow = {
+  			ai = no
+  			NOT = {
+  				all_owned_province = { has_seat_in_parliament = yes }
+  			}
+  		}
+  		effect = {
+  			if = {
+  				limit = {any_owned_province = { development = 40 has_seat_in_parliament = no }}
+  				custom_tooltip = add_all_40_development_provinces_parliament_seats_tt
+  				hidden_effect = {
+  					every_owned_province = {
+  						limit = { development = 40 has_seat_in_parliament = no }
+  						set_seat_in_parliament = yes
+  					}
+  				}
+  			}
+  			else_if = {
+  				limit = {any_owned_province = { development = 30 has_seat_in_parliament = no }}
+  				custom_tooltip = add_all_30_development_provinces_parliament_seats_tt
+  				hidden_effect = {
+  					every_owned_province = {
+  						limit = { development = 30 has_seat_in_parliament = no }
+  						set_seat_in_parliament = yes
+  					}
+  				}
+  			}
+  			else_if = {
+  				limit = {any_owned_province = { development = 20 has_seat_in_parliament = no }}
+  				custom_tooltip = add_all_20_development_provinces_parliament_seats_tt
+  				hidden_effect = {
+  					every_owned_province = {
+  						limit = { development = 20 has_seat_in_parliament = no }
+  						set_seat_in_parliament = yes
+  					}
+  				}
+  			}
+  			else = {
+  				custom_tooltip = add_all_provinces_parliament_seats_tt
+  				hidden_effect = {
+  					every_owned_province = {
+  						limit = { has_seat_in_parliament = no }
+  						set_seat_in_parliament = yes
+  					}
+  				}
+  			}
+  		}
+  		ai_will_do = {factor = 0}
+  	}
+}

@@ -1,0 +1,21 @@
+#580 - Kale
+owner = AVA
+controller = AVA
+culture = chin
+religion = animism
+capital = "Kale"
+trade_goods = ivory
+base_tax = 3
+base_production = 3
+base_manpower = 1
+is_city = yes
+discovered_by = chinese
+discovered_by = indian
+1527.1.1 = { 
+	controller = SST
+	add_core = SST
+}
+1554.1.1 = { add_core = TAU }
+1555.1.22 = { controller = TAU }
+1760.1.1 = { discovered_by = GBR }
+add_core = AVA

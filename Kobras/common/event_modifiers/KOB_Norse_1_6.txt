@@ -1,0 +1,4 @@
+kob_norse_missionary_momentum = {
+    missionaries = 1
+    global_missionary_strength = 0.015
+}

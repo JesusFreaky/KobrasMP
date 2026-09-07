@@ -1,0 +1,35 @@
+#376 - Connaught
+owner = CNN
+controller = CNN
+culture = irish
+religion = catholic
+base_tax = 2
+base_production = 2
+trade_goods = livestock
+base_manpower = 2
+capital = "Galway"
+is_city = yes
+add_core = CNN
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+1635.1.1 = { 
+	controller = ENG
+	add_core = ENG
+}
+1642.1.1 = { controller = REB revolt = { type = nationalist_rebels size = 0 } }
+1642.6.7 = { 
+	controller = IRE
+	add_core = IRE
+	revolt = { size = 1 }
+}
+1652.4.1 = { controller = ENG }
+1689.3.12 = { controller = REB revolt = { type = nationalist_rebels size = 0 } }
+1691.9.23 = { controller = ENG revolt = { size = 1 } }
+1707.5.12 = { 
+	controller = GBR
+	add_core = GBR
+}
+1798.8.27 = { controller = REB revolt = { type = nationalist_rebels size = 2 } }
+1798.9.8 = { controller = GBR revolt = { size = 1 } }

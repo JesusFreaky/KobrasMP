@@ -1,0 +1,30 @@
+#1818 - Chikuzen
+latent_trade_goods = { 
+	coal 
+}
+owner = SMZ
+controller = SMZ
+culture = kyushuan
+religion = shinto
+capital = "Hakata"
+trade_goods = chinaware
+base_tax = 5
+base_production = 3
+base_manpower = 2
+is_city = yes
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+extra_cost = 16
+center_of_trade = 2
+1542.1.1 = { discovered_by = POR }
+1550.1.1 = { add_core = OTM }
+1557.4.3 = { controller = OTM }
+1584.3.1 = { add_core = SMZ controller = SMZ }
+1587.5.15 = { add_core = MRI controller = MRI }
+1600.9.13 = { add_core = TKG controller = TKG }
+1603.1.1 = { capital = "Fukuoka" }
+add_core = SMZ
+fort_15th = yes

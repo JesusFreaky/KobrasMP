@@ -1,0 +1,5 @@
+name="Kobras"
+version="1.6"
+picture="thumbnail.png"
+supported_version="v1.37.*"
+remote_file_id="3660577399"

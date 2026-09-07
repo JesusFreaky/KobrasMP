@@ -1,0 +1,30 @@
+#Ösel and Dagö, incl. Sonnenburg and Arensburg.
+owner = LIV
+controller = LIV
+add_core = LIV
+add_core = EST
+culture = estonian
+religion = catholic
+base_tax = 2
+base_production = 2
+trade_goods = grain
+base_manpower = 2
+capital = "Arensburg"
+is_city = yes
+discovered_by = western
+discovered_by = eastern
+1542.1.1 = { religion = Protestant }
+1559.1.1 = { 
+	controller = DAN
+	add_core = DAN
+}
+1568.7.25 = { controller = SWE }
+1570.12.13 = { controller = DAN }
+1645.8.13 = { 
+	controller = SWE
+	add_core = SWE
+}
+1710.9.20 = { controller = RUS }
+1721.8.30 = { 
+	add_core = RUS
+}

@@ -1,0 +1,9 @@
+discovered_by = chinese
+add_core = BEU
+owner = BEU
+trade_goods = gold
+controller = BEU
+is_city = yes
+base_tax = 2
+base_manpower = 2
+base_production = 2

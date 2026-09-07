@@ -1,0 +1,30 @@
+#372 - Tyrone
+owner = ULS
+controller = ULS
+culture = irish
+religion = catholic
+base_tax = 3
+base_production = 3
+trade_goods = wool
+base_manpower = 2
+capital = "Dungannon"
+is_city = yes
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+1607.9.4 = { 
+	controller = ENG
+	add_core = ENG
+}
+1609.1.1 = { culture = english religion = Protestant }
+1642.6.7 = { add_core = IRE }
+1646.6.5 = { controller = IRE }
+1650.6.21 = { controller = ENG }
+1707.5.12 = { 
+	controller = GBR
+	add_core = GBR
+}
+1711.1.1 = { trade_goods = Cloth }
+1768.1.1 = { capital = "Omagh" }
+add_core = ULS

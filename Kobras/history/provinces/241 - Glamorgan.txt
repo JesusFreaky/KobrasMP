@@ -1,0 +1,33 @@
+#241 - Glamorgan+Monmouthshire
+latent_trade_goods = { 
+	coal 
+}
+owner = ENG
+controller = ENG
+culture = welsh
+religion = catholic
+base_tax = 3
+base_production = 3
+trade_goods = iron
+base_manpower = 2
+capital = "Swansea"
+is_city = yes
+add_core = ENG
+add_core = WLS
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+1400.9.16 = { controller = REB revolt = { type = nationalist_rebels size = 2 } }
+1415.1.1 = { controller = ENG revolt = { size = 1 } }
+1471.3.1 = { controller = REB revolt = { type = revolutionary_rebels size = 2 } }
+1471.5.4 = { controller = ENG revolt = { size = 1 } }
+1645.10.1 = { controller = REB revolt = { type = revolutionary_rebels size = 1 } }
+1646.5.5 = { controller = ENG revolt = { size = 1 } }
+1648.3.15 = { controller = REB revolt = { type = revolutionary_rebels size = 2 } }
+1648.7.11 = { controller = ENG revolt = { size = 1 } }
+1707.5.12 = { 
+	controller = GBR
+	add_core = GBR
+}
+1750.1.1 = { religion = Reformed }

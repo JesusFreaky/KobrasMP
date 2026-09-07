@@ -1,0 +1,23 @@
+#1138 - Kumasi
+culture = mossi
+base_manpower = 1
+religion = shamanism#Fetishism
+capital = "Akyem Kotoko"
+trade_goods = gold
+base_tax = 4
+base_production = 4
+native_size = 60
+native_ferocity = 4
+native_hostileness = 9
+add_core = ASH
+discovered_by = sub_saharan
+1500.1.1 = { 
+	controller = ASH
+	trade_goods = Gold
+	capital = "Kumasi"
+}
+1804.1.1 = { discovered_by = SOK }
+add_core = BON
+owner = BON
+controller = BON
+is_city = no
