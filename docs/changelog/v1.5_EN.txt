@@ -1,0 +1,76 @@
+KOBRAS MP OVERHAUL — CHANGELOG v1.5 (ENGLISH)
+==================================================
+
+COMPARISON BASE
+---------------
+Kobras 1.0 -> Kobras 1.5
+
+v1.5 is primarily an architecture, performance and AI-control patch built on top of the gameplay foundation established in 1.0. This changelog records only differences present in the final 1.5 build.
+
+PHYSICAL AUDIT
+--------------
+- 6,914 files in the compared 1.0 base.
+- 6,848 files in the compared 1.5 build.
+- 42 files added.
+- 108 files removed.
+- 10 existing files changed.
+- 160 different file paths in the 1.0 -> 1.5 delta.
+
+VANILLA OVERRIDE CLEANUP
+------------------------
+- Removed 51 local disaster overrides that no longer needed to be duplicated by the mod.
+- Removed 14 estate privilege overrides.
+- Removed 15 estate overrides.
+- Removed 15 Vanilla scripted-effect overrides.
+- Removed 10 Vanilla scripted-trigger overrides.
+- Removed additional province-triggered/triggered modifier overrides.
+- Goal: reduce unnecessary overrides, shrink maintenance surface and allow the game to fall back to Vanilla whenever Kobras does not need to modify the content.
+
+AI CONTROL AND DECISIONS
+------------------------
+- 42 decision files are present in the new 1.5 layer.
+- A large number of decisions receive explicit AI blocking (`ai = no`), preserving them as player tools/content and reducing unnecessary AI evaluation.
+- Includes civic, religious, government, military, national, estate, formable and other decision categories.
+- `QOLDecisions.txt`, `ReformableNations.txt` and `as_decisions.txt` also receive adjustments.
+
+ON_ACTIONS AND SCRIPTED SYSTEMS
+-------------------------------
+- `QOL_on_actions.txt` modified.
+- `as_on_actions.txt` modified.
+- `as_scripted_effects.txt` modified.
+- Alliance System/QoL infrastructure adjusted for the 1.5 architecture.
+
+DIPLOMACY / ALLIANCE SYSTEM
+----------------------------
+- `00_diplomatic_actions.txt` modified.
+- `as_decisions.txt`, `as_events.txt`, `as_on_actions.txt` and `as_scripted_effects.txt` adjusted together.
+- The Gurkans/Alliance System remains integrated into Kobras with updated infrastructure.
+
+QoL
+---
+- `QOLDecisions.txt` modified.
+- `QOL_events.txt` modified.
+- `QOL_on_actions.txt` modified.
+- The 1.0 QoL package is preserved with structural adjustments in 1.5.
+
+REFORMABLE NATIONS
+------------------
+- `ReformableNations.txt` modified.
+- Reformable-nation decision infrastructure preserved and adjusted.
+
+PRUSSIA
+-------
+- Custom `PrussianNation.txt` override removed from the 1.5 layer.
+
+DESCRIPTOR
+----------
+- `descriptor.mod` updated for the 1.5 build.
+
+VERSION DIRECTION
+-----------------
+v1.5 preserves the large gameplay/setup overhaul created in 1.0 while reducing unnecessary duplicated Vanilla content and reorganizing recurring systems, decisions, QoL and the Alliance System into a leaner multiplayer-oriented base.
+
+Project evolution:
+
+v1.0 = original map/gameplay/balance overhaul.
+v1.5 = structural, performance and architecture patch on top of that foundation.
