@@ -1,10 +1,10 @@
-﻿government = monarchy
+government = monarchy
 add_government_reform = feudalism_reform
 government_rank = 1
 technology_group = western
 primary_culture = pommeranian
 religion = catholic
-capital = 4745	# R�gen
+capital = 4745	# Rügen
 
 # KobrasMP 1444 restored start
 1405.9.22 = {
