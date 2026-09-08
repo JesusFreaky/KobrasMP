@@ -1,0 +1,7 @@
+# Vanilla 1.37 Cawa base package, restored only by approved authentic Cawa reforms.
+kob_cawa_vanilla_base_modifier = {
+	shock_damage_received = -0.05
+	land_attrition = -0.5
+	reinforce_speed = 0.5
+	is_cawa_modifier = yes
+}
