@@ -126,7 +126,7 @@ country_event = {
     }
 }
 
-# France receives permanent claims on Burgundian lands in the French region.
+# France receives permanent claims throughout the French region.
 country_event = {
     id = kob_bi.2
     title = kob_bi.2.t
@@ -136,14 +136,12 @@ country_event = {
 
     option = {
         name = kob_bi.2.a
-        BUR = {
-            every_owned_province = {
-                limit = {
-                    region = france_region
-                    NOT = { is_permanent_claim = FRA }
-                }
-                add_permanent_claim = FRA
+        france_region = {
+            limit = {
+                NOT = { owned_by = FRA }
+                NOT = { is_permanent_claim = FRA }
             }
+            add_permanent_claim = FRA
         }
         add_power_projection = {
             type = kob_burgundian_succession_france_pp
