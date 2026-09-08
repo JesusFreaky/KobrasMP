@@ -18,9 +18,9 @@ on_startup = {
 	}
 }
 
-# THIS = Province. Papal Guard Cawa has a real manpower/treasury recruitment cost.
+# THIS = Province; FROM = recruiting country.
 on_cawa_raised = {
-	owner = {
+	FROM = {
 		if = {
 			limit = { tag = PAP }
 			add_manpower = -0.5
