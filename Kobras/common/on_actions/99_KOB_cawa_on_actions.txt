@@ -1,0 +1,30 @@
+# Startup safety for countries that begin with an authentic Cawa reform.
+on_startup = {
+	if = {
+		limit = {
+			NOT = { has_country_modifier = kob_cawa_vanilla_base_modifier }
+			OR = {
+				has_reform = negusa_nagast
+				has_reform = solomonic_empire
+				has_reform = cawa_auxiliary_forces
+				has_reform = sparapet_office
+			}
+		}
+		add_country_modifier = {
+			name = kob_cawa_vanilla_base_modifier
+			duration = -1
+			hidden = yes
+		}
+	}
+}
+
+# THIS = Province. Papal Guard Cawa has a real manpower/treasury recruitment cost.
+on_cawa_raised = {
+	owner = {
+		if = {
+			limit = { tag = PAP }
+			add_manpower = -0.5
+			add_treasury = -15
+		}
+	}
+}
