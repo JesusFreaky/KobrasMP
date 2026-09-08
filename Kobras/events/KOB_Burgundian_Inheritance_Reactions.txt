@@ -104,7 +104,7 @@ country_event = {
     }
 }
 
-# Austria receives permanent claims on Burgundian lands inside the Holy Roman Empire.
+# Austria chooses between territorial claims and diplomatic recognition of Marie.
 country_event = {
     id = kob_bi.1
     title = kob_bi.1.t
@@ -114,6 +114,7 @@ country_event = {
 
     option = {
         name = kob_bi.1.a
+        ai_chance = { factor = 1 }
         BUR = {
             every_owned_province = {
                 limit = {
@@ -121,6 +122,26 @@ country_event = {
                     NOT = { is_permanent_claim = HAB }
                 }
                 add_permanent_claim = HAB
+            }
+        }
+    }
+
+    option = {
+        name = kob_bi.1.b
+        ai_chance = { factor = 1 }
+        add_opinion = {
+            who = BUR
+            modifier = kob_hab_burgundy_friendly
+        }
+        reverse_add_opinion = {
+            who = BUR
+            modifier = kob_hab_burgundy_friendly
+        }
+        if = {
+            limit = { has_dlc = "The Cossacks" }
+            add_favors = {
+                who = BUR
+                amount = 20
             }
         }
     }
