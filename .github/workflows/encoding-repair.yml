@@ -1,0 +1,23 @@
+name: Encoding repair builder
+on:
+  push:
+    branches:
+      - encoding-repair-build
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Apply verified binary-safe repair
+        run: python3 tools/encoding_repair.py
+      - name: Commit repaired blobs
+        run: |
+          git config user.name "KobrasMP Encoding Builder"
+          git config user.email "actions@users.noreply.github.com"
+          git add --             "Kobras/common/cultures/00_cultures.txt"             "Kobras/events/FlavorTUR.txt"             "Kobras/events/estate_janissaries.txt"             "Kobras/missions/DOM_French_Missions.txt"             "Kobras/common/event_modifiers/00_event_modifiers.txt"             "Kobras/history/countries/TEU - Teutonic Order.txt"             "Kobras/history/countries/COR - Corsica.txt"             "Kobras/common/great_projects/01_monuments.txt"
+          git commit -m "build: materialize verified encoding repair blobs"
+          git push origin HEAD:encoding-repair-build
