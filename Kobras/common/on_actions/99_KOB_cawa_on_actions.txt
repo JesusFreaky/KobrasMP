@@ -1,21 +1,14 @@
-# Startup safety for countries that begin with an authentic Cawa reform.
+# Event-driven Cawa base reconciliation. No polling.
 on_startup = {
-	if = {
-		limit = {
-			NOT = { has_country_modifier = kob_cawa_vanilla_base_modifier }
-			OR = {
-				has_reform = negusa_nagast
-				has_reform = solomonic_empire
-				has_reform = cawa_auxiliary_forces
-				has_reform = sparapet_office
-			}
-		}
-		add_country_modifier = {
-			name = kob_cawa_vanilla_base_modifier
-			duration = -1
-			hidden = yes
-		}
-	}
+	kob_reconcile_cawa_base_effect = yes
+}
+
+on_reform_enacted = {
+	kob_reconcile_cawa_base_effect = yes
+}
+
+on_reform_changed = {
+	kob_reconcile_cawa_base_effect = yes
 }
 
 # THIS = Province; FROM = recruiting country.
