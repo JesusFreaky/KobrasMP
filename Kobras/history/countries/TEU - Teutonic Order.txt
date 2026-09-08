@@ -55,7 +55,7 @@ change_estate_land_share = {
 
 1413.1.1 = {
 	monarch = {
-		name = "Michael Kï¿½chmeister"
+		name = "Michael Küchmeister"
 		birth_date = 1365.1.1
 		adm = 2
 		dip = 1
@@ -97,7 +97,7 @@ change_estate_land_share = {
 	}
 }
 
-1466.10.19 = { capital = 41 government_rank = 1 } # Kï¿½nigsberg
+1466.10.19 = { capital = 41 government_rank = 1 } # Königsberg
 
 1467.4.5 = {
 	monarch = {

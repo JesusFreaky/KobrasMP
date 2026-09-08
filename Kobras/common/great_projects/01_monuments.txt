@@ -1,4 +1,4 @@
-﻿hagia_sophia = {
+hagia_sophia = {
 	# province it starts in
 	start = 151
 	
