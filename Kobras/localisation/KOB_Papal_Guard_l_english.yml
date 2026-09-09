@@ -1,9 +1,10 @@
 ﻿l_english:
  kob_pap_guard_of_saint_peter_reform:0 "Guard of Saint Peter"
- kob_pap_guard_of_saint_peter_reform_desc:0 "The Holy See shall maintain a permanent military doctrine devoted to the defense of Saint Peter's patrimony and the wider interests of the Church. Adopting this doctrine enables Cawa regiments for the Papal State and begins Stage I of the Guard of Saint Peter."
+ kob_pap_guard_of_saint_peter_reform_desc:0 "The Holy See shall maintain a permanent military doctrine devoted to the defense of Saint Peter's patrimony and the wider interests of the Church. Adopting this doctrine enables Cawa regiments for the Papal State and establishes §YStage I§! of the Guard of Saint Peter. Each Papal Cawa regiment raised additionally costs §Y500 Manpower§! and §Y15 Ducats§!."
+ unlock_kob_pap_guard_of_saint_peter_reform_tt:0 "Unlocks the §YGuard of Saint Peter§! Military Doctrine."
 
  kob_pap_guard_of_saint_peter_title:0 "Guard of Saint Peter"
- kob_pap_guard_of_saint_peter_desc:0 "The temporal power of the Holy See requires soldiers bound not merely by pay, but by duty to the Church. Completing this mission unlocks the §YGuard of Saint Peter§! Military Doctrine. Adopting that doctrine enables Cawa regiments and begins §YStage I§! of the Guard."
+ kob_pap_guard_of_saint_peter_desc:0 "The temporal power of the Holy See requires soldiers bound not merely by pay, but by duty to the Church. Completing this mission unlocks the §YGuard of Saint Peter§! Military Doctrine. Adopting the doctrine enables Cawa regiments for the Papal State and establishes §YStage I§! of the Guard."
 
  kob_pap_arms_of_holy_see_title:0 "Arms of the Holy See"
  kob_pap_arms_of_holy_see_desc:0 "The Guard must grow from a protected institution into a dependable arm of Papal power. Completing this mission advances the Guard of Saint Peter to §YStage II§!."
