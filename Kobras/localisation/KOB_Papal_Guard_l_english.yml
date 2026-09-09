@@ -13,4 +13,10 @@
  kob_pap_unbroken_guard_desc:0 "Through discipline, endurance and repeated service in defense of the Church, the Guard has become a force that will not yield. Completing this mission advances the Guard of Saint Peter to §YStage III§!."
 
  kob_pap_soldiers_of_holy_league_title:0 "Soldiers of the Holy League"
- kob_pap_soldiers_of_holy_league_desc:0 "The Guard now stands at the heart of the Papacy's military leadership of Christendom, ready to fight beside the armies of the Holy League. Completing this mission advances the Guard of Saint Peter to §YStage IV§!, the final stage of its development."
+ kob_pap_soldiers_of_holy_league_desc:0 "The Guard now stands at the heart of the Papacy's military leadership of Christendom, ready to fight beside the armies of the Holy League. Completing this mission advances the Guard of Saint Peter to §YStage IV§!. The §YAutonomous§! path can advance the Guard one final step to §YStage V§!."
+
+ kob_pap_guard_stage_1_modifier:0 "Guard of Saint Peter — Stage I"
+ kob_pap_guard_stage_2_modifier:0 "Guard of Saint Peter — Stage II"
+ kob_pap_guard_stage_3_modifier:0 "Guard of Saint Peter — Stage III"
+ kob_pap_guard_stage_4_modifier:0 "Guard of Saint Peter — Stage IV"
+ kob_pap_guard_stage_5_modifier:0 "Guard of Saint Peter — Stage V"
