@@ -85,58 +85,6 @@ kob_pap_temporal_core = {
 		trigger = { OR = { current_age = age_of_reformation is_religion_enabled = protestant is_religion_enabled = reformed } }
 		effect = { set_country_flag = pap_temporal_sword_ready enable_branching_mission_review_without_ai = { key = PAP } }
 	}
-
-	kob_pap_venetian_question = {
-		icon = mission_naval_dominance
-		required_missions = { kob_pap_temporal_sword }
-		position = 9
-		provinces_to_highlight = { province_id = 112 }
-		trigger = { OR = { NOT = { exists = VEN } alliance_with = VEN VEN = { has_opinion = { who = ROOT value = 100 } } 112 = { owner = { religion_group = christian } } } }
-		effect = { set_country_flag = kob_pap_venetian_question_resolved add_dip_power = 50 add_prestige = 10 }
-	}
-
-	kob_pap_genoese_question = {
-		icon = mission_dominate_genoa
-		required_missions = { kob_pap_venetian_question }
-		position = 10
-		provinces_to_highlight = { area = liguria_area NOT = { country_or_non_sovereign_subject_holds = ROOT } }
-		trigger = { num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { value = 3 area = liguria_area } }
-		effect = { add_years_of_income = 0.5 add_dip_power = 50 set_country_flag = kob_pap_genoa_economic_axis }
-	}
-
-	kob_pap_united_italian_patrimony = {
-		icon = mission_rule_italy
-		required_missions = { kob_pap_genoese_question }
-		position = 11
-		trigger = { num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { value = 24 region = italy_region } total_development = 350 }
-		effect = { add_country_modifier = { name = pap_italian_federation duration = 7300 } add_prestige = 20 set_country_flag = kob_pap_united_italian_patrimony }
-	}
-
-	kob_pap_kingdom_of_god = {
-		icon = holy_state
-		required_missions = { kob_pap_united_italian_patrimony }
-		position = 12
-		trigger = { owns_core_province = 118 prestige = 75 total_development = 400 }
-		effect = { add_stability_or_adm_power = yes add_devotion = 20 add_reform_progress = 50 set_country_flag = kob_pap_kingdom_of_god_ready }
-	}
-
-	kob_pap_arbiter_of_christendom = {
-		icon = mission_alliances
-		required_missions = { kob_pap_kingdom_of_god }
-		position = 13
-		trigger = {
-			OR = { mission_completed = kob_pap_two_swords mission_completed = kob_pap_crown_and_cross mission_completed = kob_pap_bulwark_mediterranean mission_completed = kob_pap_rome_answers_no_crown }
-			prestige = 75
-			num_of_allies = 4
-		}
-		effect = {
-			add_dip_power = 100 add_prestige = 25 set_country_flag = kob_pap_arbiter_of_christendom
-			if = { limit = { has_country_flag = pap_imperial_path } add_prestige = 10 add_dip_power = 50 }
-			if = { limit = { has_country_flag = pap_french_path } add_army_tradition = 10 add_mil_power = 50 }
-			if = { limit = { has_country_flag = pap_spanish_path } add_navy_tradition = 10 add_dip_power = 50 }
-			if = { limit = { has_country_flag = pap_autonomous_path } add_prestige = 10 add_reform_progress = 25 }
-		}
-	}
 }
 
 kob_pap_branch_imperial = {
@@ -158,6 +106,33 @@ kob_pap_branch_imperial = {
 		icon = imperial_ascendancy required_missions = { kob_pap_guard_the_imperial_church } position = 8
 		trigger = { hre_religion_locked = yes hre_religion = catholic emperor = { religion = catholic } }
 		effect = { add_dip_power = 100 add_prestige = 20 set_country_flag = kob_pap_two_swords_achieved }
+	}
+	kob_pap_imperial_venetian_question = {
+		icon = mission_naval_dominance required_missions = { kob_pap_two_swords } position = 9
+		provinces_to_highlight = { province_id = 112 }
+		trigger = { OR = { NOT = { exists = VEN } alliance_with = VEN VEN = { has_opinion = { who = ROOT value = 100 } } 112 = { owner = { religion_group = christian } } } }
+		effect = { set_country_flag = kob_pap_venetian_question_resolved add_dip_power = 50 add_prestige = 10 }
+	}
+	kob_pap_imperial_genoese_question = {
+		icon = mission_dominate_genoa required_missions = { kob_pap_imperial_venetian_question } position = 10
+		provinces_to_highlight = { area = liguria_area NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+		trigger = { num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { value = 3 area = liguria_area } }
+		effect = { add_years_of_income = 0.5 add_dip_power = 50 set_country_flag = kob_pap_genoa_economic_axis }
+	}
+	kob_pap_imperial_united_italian_patrimony = {
+		icon = mission_rule_italy required_missions = { kob_pap_imperial_genoese_question } position = 11
+		trigger = { num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { value = 24 region = italy_region } total_development = 350 }
+		effect = { add_country_modifier = { name = pap_italian_federation duration = 7300 } add_prestige = 20 set_country_flag = kob_pap_united_italian_patrimony }
+	}
+	kob_pap_imperial_kingdom_of_god = {
+		icon = holy_state required_missions = { kob_pap_imperial_united_italian_patrimony } position = 12
+		trigger = { owns_core_province = 118 prestige = 75 total_development = 400 }
+		effect = { add_stability_or_adm_power = yes add_devotion = 20 add_reform_progress = 50 set_country_flag = kob_pap_kingdom_of_god_ready }
+	}
+	kob_pap_imperial_arbiter_of_christendom = {
+		icon = mission_alliances required_missions = { kob_pap_imperial_kingdom_of_god } position = 13
+		trigger = { OR = { mission_completed = kob_pap_two_swords mission_completed = kob_pap_crown_and_cross mission_completed = kob_pap_bulwark_mediterranean mission_completed = kob_pap_rome_answers_no_crown } prestige = 75 num_of_allies = 4 }
+		effect = { add_dip_power = 100 add_prestige = 25 set_country_flag = kob_pap_arbiter_of_christendom if = { limit = { has_country_flag = pap_imperial_path } add_prestige = 10 add_dip_power = 50 } if = { limit = { has_country_flag = pap_french_path } add_army_tradition = 10 add_mil_power = 50 } if = { limit = { has_country_flag = pap_spanish_path } add_navy_tradition = 10 add_dip_power = 50 } if = { limit = { has_country_flag = pap_autonomous_path } add_prestige = 10 add_reform_progress = 25 } }
 	}
 }
 
@@ -181,6 +156,33 @@ kob_pap_branch_france = {
 		trigger = { FRA = { religion = catholic alliance_with = ROOT } mission_completed = kob_pap_holy_league }
 		effect = { add_prestige = 20 add_mil_power = 100 set_country_flag = kob_pap_crown_and_cross_achieved }
 	}
+	kob_pap_french_venetian_question = {
+		icon = mission_naval_dominance required_missions = { kob_pap_crown_and_cross } position = 9
+		provinces_to_highlight = { province_id = 112 }
+		trigger = { OR = { NOT = { exists = VEN } alliance_with = VEN VEN = { has_opinion = { who = ROOT value = 100 } } 112 = { owner = { religion_group = christian } } } }
+		effect = { set_country_flag = kob_pap_venetian_question_resolved add_dip_power = 50 add_prestige = 10 }
+	}
+	kob_pap_french_genoese_question = {
+		icon = mission_dominate_genoa required_missions = { kob_pap_french_venetian_question } position = 10
+		provinces_to_highlight = { area = liguria_area NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+		trigger = { num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { value = 3 area = liguria_area } }
+		effect = { add_years_of_income = 0.5 add_dip_power = 50 set_country_flag = kob_pap_genoa_economic_axis }
+	}
+	kob_pap_french_united_italian_patrimony = {
+		icon = mission_rule_italy required_missions = { kob_pap_french_genoese_question } position = 11
+		trigger = { num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { value = 24 region = italy_region } total_development = 350 }
+		effect = { add_country_modifier = { name = pap_italian_federation duration = 7300 } add_prestige = 20 set_country_flag = kob_pap_united_italian_patrimony }
+	}
+	kob_pap_french_kingdom_of_god = {
+		icon = holy_state required_missions = { kob_pap_french_united_italian_patrimony } position = 12
+		trigger = { owns_core_province = 118 prestige = 75 total_development = 400 }
+		effect = { add_stability_or_adm_power = yes add_devotion = 20 add_reform_progress = 50 set_country_flag = kob_pap_kingdom_of_god_ready }
+	}
+	kob_pap_french_arbiter_of_christendom = {
+		icon = mission_alliances required_missions = { kob_pap_french_kingdom_of_god } position = 13
+		trigger = { OR = { mission_completed = kob_pap_two_swords mission_completed = kob_pap_crown_and_cross mission_completed = kob_pap_bulwark_mediterranean mission_completed = kob_pap_rome_answers_no_crown } prestige = 75 num_of_allies = 4 }
+		effect = { add_dip_power = 100 add_prestige = 25 set_country_flag = kob_pap_arbiter_of_christendom if = { limit = { has_country_flag = pap_imperial_path } add_prestige = 10 add_dip_power = 50 } if = { limit = { has_country_flag = pap_french_path } add_army_tradition = 10 add_mil_power = 50 } if = { limit = { has_country_flag = pap_spanish_path } add_navy_tradition = 10 add_dip_power = 50 } if = { limit = { has_country_flag = pap_autonomous_path } add_prestige = 10 add_reform_progress = 25 } }
+	}
 }
 
 kob_pap_branch_spain = {
@@ -203,6 +205,33 @@ kob_pap_branch_spain = {
 		trigger = { mission_completed = kob_pap_break_ottoman_advance OR = { AND = { exists = SPA SPA = { religion = catholic alliance_with = ROOT } } AND = { exists = CAS CAS = { religion = catholic alliance_with = ROOT } } } }
 		effect = { add_navy_tradition = 20 add_prestige = 20 set_country_flag = kob_pap_bulwark_mediterranean_achieved }
 	}
+	kob_pap_spanish_venetian_question = {
+		icon = mission_naval_dominance required_missions = { kob_pap_bulwark_mediterranean } position = 9
+		provinces_to_highlight = { province_id = 112 }
+		trigger = { OR = { NOT = { exists = VEN } alliance_with = VEN VEN = { has_opinion = { who = ROOT value = 100 } } 112 = { owner = { religion_group = christian } } } }
+		effect = { set_country_flag = kob_pap_venetian_question_resolved add_dip_power = 50 add_prestige = 10 }
+	}
+	kob_pap_spanish_genoese_question = {
+		icon = mission_dominate_genoa required_missions = { kob_pap_spanish_venetian_question } position = 10
+		provinces_to_highlight = { area = liguria_area NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+		trigger = { num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { value = 3 area = liguria_area } }
+		effect = { add_years_of_income = 0.5 add_dip_power = 50 set_country_flag = kob_pap_genoa_economic_axis }
+	}
+	kob_pap_spanish_united_italian_patrimony = {
+		icon = mission_rule_italy required_missions = { kob_pap_spanish_genoese_question } position = 11
+		trigger = { num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { value = 24 region = italy_region } total_development = 350 }
+		effect = { add_country_modifier = { name = pap_italian_federation duration = 7300 } add_prestige = 20 set_country_flag = kob_pap_united_italian_patrimony }
+	}
+	kob_pap_spanish_kingdom_of_god = {
+		icon = holy_state required_missions = { kob_pap_spanish_united_italian_patrimony } position = 12
+		trigger = { owns_core_province = 118 prestige = 75 total_development = 400 }
+		effect = { add_stability_or_adm_power = yes add_devotion = 20 add_reform_progress = 50 set_country_flag = kob_pap_kingdom_of_god_ready }
+	}
+	kob_pap_spanish_arbiter_of_christendom = {
+		icon = mission_alliances required_missions = { kob_pap_spanish_kingdom_of_god } position = 13
+		trigger = { OR = { mission_completed = kob_pap_two_swords mission_completed = kob_pap_crown_and_cross mission_completed = kob_pap_bulwark_mediterranean mission_completed = kob_pap_rome_answers_no_crown } prestige = 75 num_of_allies = 4 }
+		effect = { add_dip_power = 100 add_prestige = 25 set_country_flag = kob_pap_arbiter_of_christendom if = { limit = { has_country_flag = pap_imperial_path } add_prestige = 10 add_dip_power = 50 } if = { limit = { has_country_flag = pap_french_path } add_army_tradition = 10 add_mil_power = 50 } if = { limit = { has_country_flag = pap_spanish_path } add_navy_tradition = 10 add_dip_power = 50 } if = { limit = { has_country_flag = pap_autonomous_path } add_prestige = 10 add_reform_progress = 25 } }
+	}
 }
 
 kob_pap_branch_autonomous = {
@@ -213,6 +242,33 @@ kob_pap_branch_autonomous = {
 	kob_pap_sword_and_keys = { icon = mission_alliances required_missions = { kob_pap_temporal_sword } position = 6 trigger = { num_of_allies = 4 prestige = 50 } effect = { add_dip_power = 50 add_reform_progress = 25 } }
 	kob_pap_league_of_saint_peter = { icon = the_holy_league required_missions = { kob_pap_sword_and_keys } position = 7 trigger = { num_of_allies = 5 any_ally = { religion = catholic } } effect = { every_ally = { limit = { religion_group = christian } add_country_modifier = { name = pap_papal_military_aid duration = 3650 } } add_dip_power = 50 } }
 	kob_pap_rome_answers_no_crown = { icon = holy_state required_missions = { kob_pap_league_of_saint_peter } position = 8 trigger = { total_development = 300 prestige = 75 num_of_allies = 5 mission_completed = kob_pap_holy_league mission_completed = kob_pap_protector_catholic_realms } effect = { add_prestige = 25 add_dip_power = 100 set_country_flag = kob_pap_rome_answers_no_crown_achieved } }
+	kob_pap_autonomous_venetian_question = {
+		icon = mission_naval_dominance required_missions = { kob_pap_rome_answers_no_crown } position = 9
+		provinces_to_highlight = { province_id = 112 }
+		trigger = { OR = { NOT = { exists = VEN } alliance_with = VEN VEN = { has_opinion = { who = ROOT value = 100 } } 112 = { owner = { religion_group = christian } } } }
+		effect = { set_country_flag = kob_pap_venetian_question_resolved add_dip_power = 50 add_prestige = 10 }
+	}
+	kob_pap_autonomous_genoese_question = {
+		icon = mission_dominate_genoa required_missions = { kob_pap_autonomous_venetian_question } position = 10
+		provinces_to_highlight = { area = liguria_area NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+		trigger = { num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { value = 3 area = liguria_area } }
+		effect = { add_years_of_income = 0.5 add_dip_power = 50 set_country_flag = kob_pap_genoa_economic_axis }
+	}
+	kob_pap_autonomous_united_italian_patrimony = {
+		icon = mission_rule_italy required_missions = { kob_pap_autonomous_genoese_question } position = 11
+		trigger = { num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { value = 24 region = italy_region } total_development = 350 }
+		effect = { add_country_modifier = { name = pap_italian_federation duration = 7300 } add_prestige = 20 set_country_flag = kob_pap_united_italian_patrimony }
+	}
+	kob_pap_autonomous_kingdom_of_god = {
+		icon = holy_state required_missions = { kob_pap_autonomous_united_italian_patrimony } position = 12
+		trigger = { owns_core_province = 118 prestige = 75 total_development = 400 }
+		effect = { add_stability_or_adm_power = yes add_devotion = 20 add_reform_progress = 50 set_country_flag = kob_pap_kingdom_of_god_ready }
+	}
+	kob_pap_autonomous_arbiter_of_christendom = {
+		icon = mission_alliances required_missions = { kob_pap_autonomous_kingdom_of_god } position = 13
+		trigger = { OR = { mission_completed = kob_pap_two_swords mission_completed = kob_pap_crown_and_cross mission_completed = kob_pap_bulwark_mediterranean mission_completed = kob_pap_rome_answers_no_crown } prestige = 75 num_of_allies = 4 }
+		effect = { add_dip_power = 100 add_prestige = 25 set_country_flag = kob_pap_arbiter_of_christendom if = { limit = { has_country_flag = pap_imperial_path } add_prestige = 10 add_dip_power = 50 } if = { limit = { has_country_flag = pap_french_path } add_army_tradition = 10 add_mil_power = 50 } if = { limit = { has_country_flag = pap_spanish_path } add_navy_tradition = 10 add_dip_power = 50 } if = { limit = { has_country_flag = pap_autonomous_path } add_prestige = 10 add_reform_progress = 25 } }
+	}
 }
 
 kob_pap_military_balkans_africa = {
@@ -305,6 +361,6 @@ kob_pap_counter_reformation = {
 	kob_pap_defender_catholic_league = { icon = the_holy_league required_missions = { kob_pap_catholic_americas } position = 9 trigger = { OR = { AND = { hre_religion_locked = yes hre_religion = catholic } is_defender_of_faith_of_tier = 4 } } effect = { add_army_tradition = 15 add_prestige = 20 set_country_flag = kob_pap_defender_catholic_league } }
 	kob_pap_destroy_heretic_strongholds = { icon = crush_heretic_strongholds required_missions = { kob_pap_defender_catholic_league } position = 10 trigger = { OR = { AND = { hre_size = 1 NOT = { any_province = { is_part_of_hre = yes owner = { NOT = { religion = catholic } } } } } NOT = { any_country = { culture_group = germanic NOT = { religion = catholic } } } } } effect = { add_country_modifier = { name = pap_universal_church duration = -1 } set_country_flag = kob_pap_heretic_strongholds_destroyed } }
 	kob_pap_orthodox_cooperation = { icon = shield_of_christendom required_missions = { kob_pap_destroy_heretic_strongholds } position = 11 trigger = { OR = { 151 = { owner = { religion_group = christian } } 295 = { owner = { religion_group = christian } } any_ally = { religion = orthodox has_opinion = { who = ROOT value = 125 } } } } effect = { add_dip_power = 100 add_prestige = 15 set_country_flag = kob_pap_orthodox_cooperation } }
-	kob_pap_universal_church = { icon = holy_state required_missions = { kob_pap_orthodox_cooperation } position = 12 trigger = { religious_unity = 1 prestige = 90 mission_completed = kob_pap_arbiter_of_christendom } effect = { add_prestige = 25 add_devotion = 25 set_country_flag = kob_pap_universal_church_achieved } }
+	kob_pap_universal_church = { icon = holy_state required_missions = { kob_pap_orthodox_cooperation } position = 12 trigger = { religious_unity = 1 prestige = 90 OR = { mission_completed = kob_pap_imperial_arbiter_of_christendom mission_completed = kob_pap_french_arbiter_of_christendom mission_completed = kob_pap_spanish_arbiter_of_christendom mission_completed = kob_pap_autonomous_arbiter_of_christendom } } effect = { add_prestige = 25 add_devotion = 25 set_country_flag = kob_pap_universal_church_achieved } }
 	kob_pap_urbi_et_orbi = { icon = holy_state required_missions = { kob_pap_universal_church } position = 13 trigger = { mission_completed = kob_pap_a_catholic_empire mission_completed = kob_pap_break_the_crescent mission_completed = kob_pap_seat_of_universal_church } effect = { add_prestige = 50 add_stability_or_adm_power = yes add_reform_progress = 100 set_country_flag = kob_pap_urbi_et_orbi if = { limit = { has_country_flag = pap_imperial_path } add_prestige = 10 add_dip_power = 50 } if = { limit = { has_country_flag = pap_french_path } add_army_tradition = 10 add_mil_power = 50 } if = { limit = { has_country_flag = pap_spanish_path } add_navy_tradition = 10 add_dip_power = 50 } if = { limit = { has_country_flag = pap_autonomous_path } add_prestige = 10 add_reform_progress = 25 } } }
 }
