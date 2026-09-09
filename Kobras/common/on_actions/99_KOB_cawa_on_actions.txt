@@ -11,9 +11,9 @@ on_reform_changed = {
 	kob_reconcile_cawa_base_effect = yes
 }
 
-# THIS = Province; FROM = recruiting country.
+# THIS = Province; owner = recruiting country.
 on_cawa_raised = {
-	FROM = {
+	owner = {
 		if = {
 			limit = { tag = PAP }
 			add_manpower = -0.5
