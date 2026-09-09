@@ -1,0 +1,91 @@
+# KobrasMP — Guard of Saint Peter staged Cawa package
+# Stages are mutually exclusive. Stage V is reserved for the Autonomous path.
+
+kob_pap_guard_stage_1_modifier = {
+	potential = {
+		tag = PAP
+		has_reform = kob_pap_guard_of_saint_peter_reform
+	}
+	trigger = {
+		has_country_flag = kob_pap_guard_stage_1
+		NOT = { has_country_flag = kob_pap_guard_stage_2 }
+	}
+
+	amount_of_cawa = 0.20
+	land_attrition = -0.50
+	reinforce_speed = 0.50
+	is_cawa_modifier = yes
+}
+
+kob_pap_guard_stage_2_modifier = {
+	potential = {
+		tag = PAP
+		has_reform = kob_pap_guard_of_saint_peter_reform
+	}
+	trigger = {
+		has_country_flag = kob_pap_guard_stage_2
+		NOT = { has_country_flag = kob_pap_guard_stage_3 }
+	}
+
+	amount_of_cawa = 0.25
+	land_attrition = -0.50
+	reinforce_speed = 0.50
+	shock_damage_received = -0.05
+	is_cawa_modifier = yes
+}
+
+kob_pap_guard_stage_3_modifier = {
+	potential = {
+		tag = PAP
+		has_reform = kob_pap_guard_of_saint_peter_reform
+	}
+	trigger = {
+		has_country_flag = kob_pap_guard_stage_3
+		NOT = { has_country_flag = kob_pap_guard_stage_4 }
+	}
+
+	amount_of_cawa = 0.30
+	land_attrition = -0.50
+	reinforce_speed = 0.50
+	shock_damage_received = -0.05
+	morale_damage_received = -0.05
+	is_cawa_modifier = yes
+}
+
+kob_pap_guard_stage_4_modifier = {
+	potential = {
+		tag = PAP
+		has_reform = kob_pap_guard_of_saint_peter_reform
+	}
+	trigger = {
+		has_country_flag = kob_pap_guard_stage_4
+		NOT = { has_country_flag = pap_autonomous_path }
+	}
+
+	amount_of_cawa = 0.35
+	land_attrition = -0.50
+	reinforce_speed = 0.50
+	shock_damage_received = -0.10
+	morale_damage_received = -0.10
+	morale_damage = 0.05
+	is_cawa_modifier = yes
+}
+
+kob_pap_guard_stage_5_modifier = {
+	potential = {
+		tag = PAP
+		has_reform = kob_pap_guard_of_saint_peter_reform
+	}
+	trigger = {
+		has_country_flag = kob_pap_guard_stage_4
+		has_country_flag = pap_autonomous_path
+	}
+
+	amount_of_cawa = 0.40
+	land_attrition = -0.50
+	reinforce_speed = 0.50
+	shock_damage_received = -0.10
+	morale_damage_received = -0.10
+	morale_damage = 0.05
+	is_cawa_modifier = yes
+}
