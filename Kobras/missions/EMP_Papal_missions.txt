@@ -220,7 +220,7 @@ kob_pap_military_balkans_africa = {
 	potential_on_load = { has_dlc = "Emperor" tag = PAP }
 	potential = { has_dlc = "Emperor" NOT = { map_setup = map_setup_random } tag = PAP }
 	has_country_shield = yes
-	kob_pap_guard_of_saint_peter = { icon = form_the_swiss_guard required_missions = { } position = 1 trigger = { OR = { is_year = 1450 army_tradition = 25 } army_size_percentage = 0.75 } effect = { set_country_flag = kob_pap_guard_of_saint_peter_unlocked add_army_tradition = 10 add_mil_power = 25 } }
+	kob_pap_guard_of_saint_peter = { icon = form_the_swiss_guard required_missions = { } position = 1 trigger = { OR = { is_year = 1450 army_tradition = 25 } army_size_percentage = 0.75 } effect = { unlock_government_reform = { government_reform = kob_pap_guard_of_saint_peter_reform } add_army_tradition = 10 add_mil_power = 25 } }
 	kob_pap_catholic_volunteers = { icon = professional_army required_missions = { kob_pap_guard_of_saint_peter } position = 2 trigger = { army_size_percentage = 1 manpower_percentage = 0.5 } effect = { create_general = { tradition = 60 } add_mil_power = 25 } }
 	kob_pap_arms_of_holy_see = { icon = professional_army required_missions = { kob_pap_catholic_volunteers } position = 3 trigger = { army_tradition = 35 manpower_percentage = 0.4 } effect = { set_country_flag = kob_pap_guard_stage_2 add_army_tradition = 10 } }
 	kob_pap_roman_navy = { icon = mission_naval_dominance required_missions = { kob_pap_arms_of_holy_see } position = 4 trigger = { navy_size_percentage = 1 navy_tradition = 20 } effect = { add_navy_tradition = 20 add_dip_power = 25 } }

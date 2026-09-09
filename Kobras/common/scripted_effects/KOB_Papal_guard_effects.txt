@@ -1,0 +1,5 @@
+# KobrasMP — Guard of Saint Peter progression
+
+kob_pap_start_guard_stage_1 = {
+	set_country_flag = kob_pap_guard_stage_1
+}

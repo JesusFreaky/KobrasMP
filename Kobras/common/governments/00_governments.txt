@@ -1371,6 +1371,7 @@ theocracy = {
 				ahmudan_system_reform
 				ghazi_reform
 				the_cawa_regiments_reform
+				kob_pap_guard_of_saint_peter_reform
 				tercio_reform
 				fuero_militar_reform
 				ordennancas_reform
