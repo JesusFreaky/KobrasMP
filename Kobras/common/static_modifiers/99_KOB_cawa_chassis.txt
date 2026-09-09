@@ -1,3 +1,0 @@
-# Cawa is a neutral chassis globally. National mechanics provide all Cawa combat modifiers.
-cawa_regiment = {
-}

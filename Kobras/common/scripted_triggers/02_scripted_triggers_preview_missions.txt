@@ -34,9 +34,6 @@ has_branching_missions = {
 		has_mission = TIM_mushasha
 		has_mission = ven_army_republic
 		has_mission = tatars_religious_question
-
-		# KobrasMP — Papal State v2.2
-		has_mission = kob_pap_temporal_sword
 	}
 }
 
@@ -76,9 +73,6 @@ has_any_mission_and_key_mismatch = {
 		has_mission_and_key_mismatch = { mission = TIM_mushasha								key = TIM }
 		has_mission_and_key_mismatch = { mission = ven_army_republic						key = VEN }
 		has_mission_and_key_mismatch = { mission = tatars_religious_question				key = HORDES }
-
-		# KobrasMP — Papal State v2.2
-		has_mission_and_key_mismatch = { mission = kob_pap_temporal_sword key = PAP }
 	}
 }
 
@@ -160,8 +154,6 @@ can_preview_missions = {
 			can_preview_mission_of_key = { key = TIM }
 			can_preview_mission_of_key = { key = VEN }
 			can_preview_mission_of_key = { key = HORDES }
-			# KobrasMP — Papal State v2.2
-			can_preview_mission_of_key = { key = PAP }
 		}
 	}
 }
@@ -434,17 +426,6 @@ has_selected_a_branch = {
 				}
 				can_preview_mission_of_key_and_batch = { key = HORDES batch = $batch$ }
 			}
-
-			# KobrasMP — Papal State v2.2
-			AND = {
-				OR = {
-					has_country_flag = pap_imperial_path
-					has_country_flag = pap_french_path
-					has_country_flag = pap_spanish_path
-					has_country_flag = pap_autonomous_path
-				}
-				can_preview_mission_of_key_and_batch = { key = PAP batch = $batch$ }
-			}
 		}
 	}
 }
@@ -482,8 +463,6 @@ num_of_mission_branches_4 = {
 		# none
 		#Winds of Change
 		# none
-		# KobrasMP — Papal State v2.2
-		can_preview_mission_of_key_and_batch = { key = PAP batch = $batch$ }
 	}
 }
 
@@ -647,12 +626,6 @@ currently_selected_branch_1 = {
 			can_preview_mission_of_key_and_batch = { key = HORDES batch = $batch$ }
 			has_country_flag = hordes_tolerance_branch_flag
 		}
-
-		# KobrasMP — Papal State v2.2
-		AND = {
-			can_preview_mission_of_key_and_batch = { key = PAP batch = $batch$ }
-			has_country_flag = pap_imperial_path
-		}
 	}
 }
 currently_selected_branch_2 = {
@@ -807,12 +780,6 @@ currently_selected_branch_2 = {
 			can_preview_mission_of_key_and_batch = { key = HORDES batch = $batch$ }
 			has_country_flag = hordes_devout_branch_flag
 		}
-
-		# KobrasMP — Papal State v2.2
-		AND = {
-			can_preview_mission_of_key_and_batch = { key = PAP batch = $batch$ }
-			has_country_flag = pap_french_path
-		}
 	}
 }
 currently_selected_branch_3 = {
@@ -867,12 +834,6 @@ currently_selected_branch_3 = {
 			can_preview_mission_of_key_and_batch = { key = HORDES batch = $batch$ }
 			has_country_flag = hordes_confucian_branch_flag
 		}
-
-		# KobrasMP — Papal State v2.2
-		AND = {
-			can_preview_mission_of_key_and_batch = { key = PAP batch = $batch$ }
-			has_country_flag = pap_spanish_path
-		}
 	}
 }
 currently_selected_branch_4 = {
@@ -901,12 +862,6 @@ currently_selected_branch_4 = {
 		# none
 		#Winds of Change
 		# none
-
-		# KobrasMP — Papal State v2.2
-		AND = {
-			can_preview_mission_of_key_and_batch = { key = PAP batch = $batch$ }
-			has_country_flag = pap_autonomous_path
-		}
 	}
 }
 currently_selected_branch_5 = {

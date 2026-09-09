@@ -925,15 +925,6 @@ select_current_missions_TIM = {
 	}
 }
 select_current_missions_VEN = {} 	#Empty
-
-select_current_missions_PAP = {
-if = { limit = { has_country_flag = pap_imperial_path } clr_country_flag = pap_french_path clr_country_flag = pap_spanish_path clr_country_flag = pap_autonomous_path }
-if = { limit = { has_country_flag = pap_french_path } clr_country_flag = pap_imperial_path clr_country_flag = pap_spanish_path clr_country_flag = pap_autonomous_path }
-if = { limit = { has_country_flag = pap_spanish_path } clr_country_flag = pap_imperial_path clr_country_flag = pap_french_path clr_country_flag = pap_autonomous_path }
-if = { limit = { has_country_flag = pap_autonomous_path } clr_country_flag = pap_imperial_path clr_country_flag = pap_french_path clr_country_flag = pap_spanish_path }
-set_country_flag = pap_temporal_sword_branch_selected
-swap_non_generic_missions = yes
-}
 select_current_missions_HORDES = {
 	hidden_effect = {
 		if = {
@@ -1017,9 +1008,6 @@ select_current_branch = {
 	if = { limit = { can_preview_mission_of_key_and_batch = { key = TIM batch = $batch$ } } select_current_missions = { key = TIM } }
 	if = { limit = { can_preview_mission_of_key_and_batch = { key = VEN batch = $batch$ } } select_current_missions = { key = VEN } }
 	if = { limit = { can_preview_mission_of_key_and_batch = { key = HORDES batch = $batch$ } } select_current_missions = { key = HORDES } }
-
-	# KobrasMP — Papal State v2.2
-	if = { limit = { can_preview_mission_of_key_and_batch = { key = PAP batch = $batch$ } } select_current_missions = { key = PAP } }
 }
 
 clear_all_branching_flags = {
@@ -1242,16 +1230,6 @@ clear_all_branching_flags = {
 		clr_country_flag = hordes_devout_branch_flag
 		clr_country_flag = hordes_confucian_branch_flag
 	}
-
-	# KobrasMP — Papal State v2.2
-	if = {
-		limit = { can_preview_mission_of_key_and_batch = { key = PAP batch = $batch$ } }
-		clr_preview_loc_branch = { key = PAP batch = $batch$ }
-		clr_country_flag = pap_imperial_path
-		clr_country_flag = pap_french_path
-		clr_country_flag = pap_spanish_path
-		clr_country_flag = pap_autonomous_path
-	}
 }
 
 set_preview_loc_branch = {
@@ -1466,14 +1444,6 @@ preview_mission_branch_1 = {
 		set_preview_loc_branch = { key = HAB batch = $batch$ branch = 1 }
 		set_country_flag = hab_hre_branch
 		custom_tooltip = hab_preview_hre_branch
-	}
-
-	# KobrasMP — Papal State v2.2
-	if = {
-		limit = { can_preview_mission_of_key_and_batch = { key = PAP batch = $batch$ } }
-		set_preview_loc_branch = { key = PAP batch = $batch$ branch = 1 }
-		set_country_flag = pap_imperial_path
-		custom_tooltip = PAP_preview_hre
 	}
 }
 preview_mission_branch_2 = {
@@ -1692,14 +1662,6 @@ preview_mission_branch_2 = {
 		set_country_flag = hordes_devout_branch_flag
 		custom_tooltip = hordes_preview_devout
 	}
-
-	# KobrasMP — Papal State v2.2
-	if = {
-		limit = { can_preview_mission_of_key_and_batch = { key = PAP batch = $batch$ } }
-		set_preview_loc_branch = { key = PAP batch = $batch$ branch = 2 }
-		set_country_flag = pap_french_path
-		custom_tooltip = PAP_preview_france
-	}
 }
 preview_mission_branch_3 = {
 	#Origins
@@ -1764,14 +1726,6 @@ preview_mission_branch_3 = {
 		set_country_flag = hordes_confucian_branch_flag
 		custom_tooltip = hordes_preview_confucian
 	}
-
-	# KobrasMP — Papal State v2.2
-	if = {
-		limit = { can_preview_mission_of_key_and_batch = { key = PAP batch = $batch$ } }
-		set_preview_loc_branch = { key = PAP batch = $batch$ branch = 3 }
-		set_country_flag = pap_spanish_path
-		custom_tooltip = PAP_preview_spain
-	}
 }
 preview_mission_branch_4 = {
 	#Origins
@@ -1804,14 +1758,6 @@ preview_mission_branch_4 = {
 	# none
 	#Winds of Change
 	# none
-
-	# KobrasMP — Papal State v2.2
-	if = {
-		limit = { can_preview_mission_of_key_and_batch = { key = PAP batch = $batch$ } }
-		set_preview_loc_branch = { key = PAP batch = $batch$ branch = 4 }
-		set_country_flag = pap_autonomous_path
-		custom_tooltip = PAP_preview_independent
-	}
 }
 preview_mission_branch_5 = {
 	#Origins
@@ -1873,8 +1819,6 @@ clear_preview_mission_keys_for_batch = {
 	clear_preview_mission_key = { batch = $batch$ key = VEN }
 	clear_preview_mission_key = { batch = $batch$ key = HORDES }
 	clr_country_flag = has_batch_$batch$_active
-
-	clear_preview_mission_key = { batch = $batch$ key = PAP }
 }
 
 clear_mismatching_mission_key = {
@@ -1919,8 +1863,6 @@ clear_mismatching_mission_keys_for_batch = {
 		which = can_preview_missions_var
 		value = -1
 	}
-
-	clear_mismatching_mission_key = { mission = kob_pap_temporal_sword key = PAP batch = $batch$ }
 }
 
 update_mission_previews = {
