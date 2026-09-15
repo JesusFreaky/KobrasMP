@@ -1360,20 +1360,17 @@ WoC_austria_2_germany = {
 						area = lower_bavaria_area
 					}
 				}
+				add_province_modifier = {
+					name = hab_salt_mines
+					duration = -1
+				}
 			}
-			add_province_modifier = {
-				name = hab_salt_mines
-				duration = -1
-			}
+
+			custom_tooltip = SEPERATOR_TOOLTIP
+			add_mil_power = 50
+			add_prestige_or_monarch_power = { amount = 10 }
 		}
 	}
-
-	custom_tooltip = SEPERATOR_TOOLTIP
-
-	add_mil_power = 50
-
-	add_prestige_or_monarch_power = { amount = 10 }
-}
 
 	hab_unify_germany = {
 		icon = ger_kaiserreich
@@ -1543,6 +1540,7 @@ WoC_austria_2_germany = {
 			}
 		} 
 	}
+}
 
 WoC_austria_2_1 = {
 	slot = 2
