@@ -14244,7 +14244,7 @@ hab_imperial_cities = {
 }
 
 hab_salt_mines = {
-	trade_goods_size = 1
+	trade_goods_size = 0.3
 }
 
 hab_fort_of_breisgau = {
