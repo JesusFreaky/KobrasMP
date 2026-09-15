@@ -43,4 +43,3 @@ discovered_by = ottoman
 	controller = HAB
 }
 add_core = STY
-fort_15th = yes
