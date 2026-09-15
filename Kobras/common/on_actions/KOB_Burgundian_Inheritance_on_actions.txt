@@ -1,0 +1,17 @@
+# KobrasMP Burgundian Succession
+# Forces Marie onto the Burgundian throne immediately when Charles dies.
+# This hook deliberately bypasses the Vanilla heir-quality / dynasty checks.
+
+# country
+on_monarch_death = {
+    if = {
+        limit = {
+            tag = BUR
+            has_country_modifier = burgundian_succession_crisis
+            NOT = { has_country_flag = burgundian_succession_has_already_fired }
+            is_subject = no
+            is_lesser_in_union = no
+        }
+        country_event = { id = kob_bi.100 }
+    }
+}

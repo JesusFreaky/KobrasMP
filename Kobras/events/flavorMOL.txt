@@ -90,7 +90,7 @@ country_event = {
 	option = { # Polish March
 		name = "flavor_mol.2.a"
 		ai_chance = {
-			factor = 65
+			factor = 100
 		}
 		set_global_flag = mol_polish_march
 		define_ruler = {
@@ -127,13 +127,7 @@ country_event = {
 				NOT = { war_with = ROOT }
 			}
 		}
-		ai_chance = {
-			factor = 20
-			modifier = {
-				factor = 2
-				has_global_flag = hun_moldavia_hungarian_alliance
-			}
-		}
+		ai_chance = { factor = 0 }
 		set_global_flag = mol_hungarian_march
 		define_ruler = {
 			name = "Petru"
@@ -173,9 +167,7 @@ country_event = {
 	}
 	option = { # Independence
 		name = "flavor_mol.2.c"
-		ai_chance = {
-			factor = 15
-		}
+		ai_chance = { factor = 0 }
 		add_opinion = {
 			who = POL
 			modifier = resisted_polish_interference

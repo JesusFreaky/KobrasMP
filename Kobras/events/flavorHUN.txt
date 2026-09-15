@@ -215,7 +215,7 @@ country_event = {
 	}
 
 	option = {
-		ai_chance = { factor = 75 }
+		ai_chance = { factor = 0 }
 		trigger = {
 			OR = {
 				has_heir = no
@@ -264,7 +264,7 @@ country_event = {
 	}
 	option = {
 		name = flavor_hun.2.b
-		ai_chance = { factor = 25 }
+		ai_chance = { factor = 100 }
 		add_stability_or_adm_power = yes
 		HUN = {
 			if = {
@@ -286,15 +286,7 @@ country_event = {
 			NOT = { has_heir = "Ladislaus Postumus" }
 			NOT = { dynasty = HAB }
 		}
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 10
-				heir_adm = 5
-				heir_mil = 5
-				heir_dip = 5
-			}
-		}
+		ai_chance = { factor = 0 }
 		remove_historical_friend = HAB
 		HAB = { remove_historical_friend = HUN }
 		kill_ruler = yes
@@ -346,6 +338,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+		ai = no # KobrasMP: deterministic Austrian PU path for AI Hungary
 		OR = {
 			tag = HUN
 			was_tag = HUN

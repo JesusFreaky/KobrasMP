@@ -1,20 +1,172 @@
 namespace = kob_bi
+
+# Immediate succession resolver called from on_monarch_death.
+country_event = {
+    id = kob_bi.100
+    title = none
+    desc = none
+    picture = none
+    hidden = yes
+    is_triggered_only = yes
+
+    immediate = {
+        set_country_flag = burgundian_succession_has_already_fired
+        remove_country_modifier = burgundian_succession_crisis
+        set_country_flag = charles_died
+
+        # If Marie already inherited normally, keep her. Otherwise overwrite
+        # whatever successor the engine selected and put Marie on the throne.
+        if = {
+            limit = { has_ruler_flag = mary_is_heir }
+            add_legitimacy = 10
+        }
+        else = {
+            define_ruler = {
+                name = "Marie"
+                dynasty = "de Bourgogne"
+                age = 21
+                adm = 6
+                dip = 6
+                mil = 6
+                claim = 100
+                female = yes
+            }
+            add_ruler_personality = well_connected_personality
+            set_ruler_flag = mary_is_heir
+        }
+
+        country_event = { id = kob_bi.101 }
+    }
+
+    option = {
+        ai_chance = { factor = 1 }
+    }
+}
+
+# KobrasMP resolution of the Burgundian Succession.
+# Burgundy remains independent; no PU, automatic war or Imperial Incident is created.
+country_event = {
+    id = kob_bi.101
+    title = "incidents_bur_inheritance.1.t"
+    desc = "incidents_bur_inheritance.1.desc"
+    picture = DEATH_OF_HEIR_eventPicture
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    immediate = {
+        set_country_flag = burgundian_succession_start
+        add_country_modifier = {
+            name = mary_is_on_the_throne
+            duration = 14600
+            hidden = yes
+        }
+        if = {
+            limit = { has_ruler_flag = mary_is_heir }
+            add_ruler_personality = well_connected_personality
+        }
+    }
+
+    option = {
+        name = "incidents_bur_inheritance.1.a"
+        ai_chance = { factor = 100 }
+
+        every_subject_country = {
+            limit = {
+                ai = yes
+                NOT = { tag = NEV }
+                capital_scope = {
+                    OR = {
+                        region = france_region
+                        culture_group = french
+                        culture = dutch
+                        culture = flemish
+                        culture = frisian
+                        is_part_of_hre = yes
+                    }
+                }
+            }
+            BUR = { inherit = PREV }
+        }
+
+        if = {
+            limit = { exists = FRA }
+            FRA = { country_event = { id = kob_bi.2 days = 5 } }
+        }
+        if = {
+            limit = { exists = HAB }
+            HAB = { country_event = { id = kob_bi.1 days = 5 } }
+        }
+
+        # Close the succession cleanly without starting any Vanilla incident.
+        clr_country_flag = burgundian_succession_start
+        set_country_flag = bur_crisis_has_happened
+    }
+}
+
+# Austria chooses between territorial claims and diplomatic recognition of Marie.
 country_event = {
     id = kob_bi.1
     title = kob_bi.1.t
     desc = kob_bi.1.d
     picture = DIPLOMACY_eventPicture
     is_triggered_only = yes
+
     option = {
         name = kob_bi.1.a
-        if = { limit = { is_rival = BUR } remove_rival = BUR }
-        BUR = { if = { limit = { is_rival = HAB } remove_rival = HAB } }
-        add_opinion = { who = BUR modifier = kob_hab_burgundy_friendly }
-        add_trust = { who = BUR value = 20 }
+        ai_chance = { factor = 1 }
+        BUR = {
+            every_owned_province = {
+                limit = {
+                    is_part_of_hre = yes
+                    NOT = { is_permanent_claim = HAB }
+                }
+                add_permanent_claim = HAB
+            }
+        }
     }
+
     option = {
         name = kob_bi.1.b
-        add_opinion = { who = BUR modifier = kob_hab_burgundy_hostile }
-        add_trust = { who = BUR value = -20 }
+        ai_chance = { factor = 1 }
+        add_opinion = {
+            who = BUR
+            modifier = kob_hab_burgundy_friendly
+        }
+        reverse_add_opinion = {
+            who = BUR
+            modifier = kob_hab_burgundy_friendly
+        }
+        if = {
+            limit = { has_dlc = "The Cossacks" }
+            add_favors = {
+                who = BUR
+                amount = 20
+            }
+        }
+    }
+}
+
+# France receives permanent claims throughout the French region.
+country_event = {
+    id = kob_bi.2
+    title = kob_bi.2.t
+    desc = kob_bi.2.d
+    picture = DIPLOMACY_eventPicture
+    is_triggered_only = yes
+
+    option = {
+        name = kob_bi.2.a
+        france_region = {
+            limit = {
+                NOT = { owned_by = FRA }
+                NOT = { is_permanent_claim = FRA }
+            }
+            add_permanent_claim = FRA
+        }
+        add_power_projection = {
+            type = kob_burgundian_succession_france_pp
+            amount = 5
+        }
     }
 }

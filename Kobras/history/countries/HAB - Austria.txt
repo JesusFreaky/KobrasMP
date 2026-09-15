@@ -70,9 +70,9 @@ add_accepted_culture = slovene
 		dynasty = "von Habsburg"
 		birth_date = 1440.2.22
 		death_date = 1457.11.24
-		adm = 3
-		dip = 3
-		mil = 3
+		adm = 4
+		dip = 4
+		mil = 4
 	}
 	set_country_flag = hab_ladislaus_postumus_heir
 }
@@ -87,9 +87,9 @@ add_accepted_culture = slovene
 		dynasty = "von Habsburg"
 		birth_date = 1440.2.22
 		death_date = 1457.11.24
-		adm = 3
-		dip = 3
-		mil = 3
+		adm = 4
+		dip = 4
+		mil = 4
 	}
 }
 
