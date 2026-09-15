@@ -724,7 +724,7 @@ WoC_austria_1_1 = {
 				ROOT = {
 					NOT = {
 						development_in_provinces = {
-							value = 180 #start:122
+							value = 160 #start:122
 							culture = austrian
 						}
 					}
@@ -746,14 +746,14 @@ WoC_austria_1_1 = {
 		}
 		trigger = {
 			development_in_provinces = {
-				value = 180 #start:122
+				value = 160 #start:122
 				culture = austrian
 			}
 			num_of_owned_provinces_with = {
 				value = 5
 				culture = ROOT
-				num_of_buildings_in_province = 3
-				development = 20
+				num_of_buildings_in_province = 2
+				development = 15
 			}
 		}
 		effect = {
@@ -762,7 +762,7 @@ WoC_austria_1_1 = {
 					has_dlc = "Mandate of Heaven"
 				}
 				distribute_development = {
-					amount = 10
+					amount = 20
 					type = tax
 				}
 				custom_tooltip = HAB_UNLOCK_PROSPERITY_EDICT
@@ -771,7 +771,7 @@ WoC_austria_1_1 = {
 			else = {
 				change_government_reform_progress = 50
 				distribute_development = {
-					amount = 15
+					amount = 20
 					type = tax
 				}
 				add_country_modifier = {
@@ -790,23 +790,22 @@ WoC_austria_1_1 = {
 			province_id = 134
 			OR = {
 				NOT = { owned_by = root }
-				NOT = { development = 50 }
-				NOT = { num_of_buildings_in_province = 6 }
+				NOT = { development = 45 }
+				NOT = { num_of_buildings_in_province = 5 }
 			}
 		}
 		trigger = {
 			134 = {
 				owned_by = root
-				development = 50
-				num_of_buildings_in_province = 6
+				development = 45
+				num_of_buildings_in_province = 5
 			}
 			has_adm_advisor_3 = yes
 			has_dip_advisor_3 = yes
 			has_mil_advisor_3 = yes
-			is_in_deficit = no
 		}
 		effect = {
-			add_prestige_or_monarch_power = { amount = 15 }
+			add_prestige_or_monarch_power = { amount = 50 }
 			134 = {
 				add_province_triggered_modifier = hab_vienna_ballrooms
 			}
@@ -856,7 +855,7 @@ WoC_austria_2 = {
 									preferred_emperor = ROOT
 									has_opinion = { who = ROOT value = 75 }
 								}
-								amount = 4
+								amount = 3
 							}
 						}
 					}
@@ -876,7 +875,7 @@ WoC_austria_2 = {
 						preferred_emperor = ROOT
 						has_opinion = { who = ROOT value = 75 }
 					}
-					amount = 4
+					amount = 3
 				}
 			}
 			else = {
@@ -916,7 +915,7 @@ WoC_austria_2 = {
 				}
 				add_casus_belli = {
 					type = cb_restore_personal_union
-					months = 300
+					months = 600
 					target = BOH
 				}
 			}
@@ -948,7 +947,7 @@ WoC_austria_2 = {
 
 			add_country_modifier = {
 				name = "succesful_bid_for_imperial_crown"
-				duration = 5475 #15 years
+				duration = 18250 #15 years
 			}
 		}
 		ai_weight = {
@@ -1352,21 +1351,29 @@ WoC_austria_2_germany = {
 			}
 		} 
 
-		effect = {  
-			76 = {
-				add_province_modifier = {
-					name = hab_salt_mines
-					duration = -1
+		effect = {
+			every_province = {
+				limit = {
+					OR = {
+						area = east_bavaria_area
+						area = upper_bavaria_area
+						area = lower_bavaria_area
+					}
 				}
 			}
-
-			custom_tooltip = SEPERATOR_TOOLTIP
-
-			add_mil_power = 50
-
-			add_prestige_or_monarch_power = { amount = 10 }
-		} 
+			add_province_modifier = {
+				name = hab_salt_mines
+				duration = -1
+			}
+		}
 	}
+
+	custom_tooltip = SEPERATOR_TOOLTIP
+
+	add_mil_power = 50
+
+	add_prestige_or_monarch_power = { amount = 10 }
+}
 
 	hab_unify_germany = {
 		icon = ger_kaiserreich
@@ -1536,7 +1543,6 @@ WoC_austria_2_germany = {
 			}
 		} 
 	}
-}
 
 WoC_austria_2_1 = {
 	slot = 2
@@ -1733,7 +1739,7 @@ WoC_austria_2_1 = {
 			}
 		}
 		effect = {
-			add_army_tradition_or_mil_power = { amount = 5 }
+			add_army_tradition_or_mil_power = { amount = 15 }
 
 			custom_tooltip = SEPERATOR_TOOLTIP
 
@@ -1747,7 +1753,7 @@ WoC_austria_2_1 = {
 				}
 				add_casus_belli = {
 					type = cb_restore_personal_union
-					months = 300
+					months = 600
 					target = HUN
 				}
 			}
@@ -1827,7 +1833,7 @@ WoC_austria_2_1 = {
 					exists = TUR
 				}
 				has_won_war_against = {
-					who = TUR
+					who = BOS
 					max_years_since = 25
 				}
 			}
@@ -1865,7 +1871,7 @@ WoC_austria_2_1 = {
 		effect = {
 			add_country_modifier = {
 				name = hab_into_the_balkans
-				duration = 7300
+				duration = -1
 			}
 
 			add_adm_power = 100
@@ -1959,14 +1965,14 @@ WoC_austria_2_1 = {
 		icon = balance_the_estates
 		position = 11
 		trigger = {
-			crown_land_share = 40
+			crown_land_share = 30
 			if = {
 				limit = {
 					has_estate = estate_nobles
 				}
 				estate_loyalty = {
 					estate = estate_nobles
-					loyalty = 60
+					loyalty = 50
 				}
 			}
 			if = {
@@ -1975,7 +1981,7 @@ WoC_austria_2_1 = {
 				}
 				estate_loyalty = {
 					estate = estate_burghers
-					loyalty = 60
+					loyalty = 50
 				}
 			}
 			if = {
@@ -1984,24 +1990,24 @@ WoC_austria_2_1 = {
 				}
 				estate_loyalty = {
 					estate = estate_church
-					loyalty = 60
+					loyalty = 50
 				}
 			}
 		}
 		effect = {
-			change_government_reform_progress = 25
+			change_government_reform_progress = 50
 
 			custom_tooltip = SEPERATOR_TOOLTIP
 
 			add_estate_loyalty = {
 				estate = all
-				loyalty = 5
+				loyalty = 15
 			}
 			custom_tooltip = add_5_crown_land_share
 			hidden_effect = {
 				change_estate_land_share = {
 					estate = all
-					share = -5
+					share = -10
 				}
 			}
 		}
@@ -2366,11 +2372,17 @@ WoC_austria_3_germany = {
 		} 
 
 		effect = {  
+			custom_tooltip = HAB_UPGRADE_OFFICERS_PRIVILEGE
+			set_country_flag = hab_military_reform_flag
+
+			custom_tooltip = SEPERATOR_TOOLTIP
+
 			give_claims = { region = north_german_region }
 
 			custom_tooltip = SEPERATOR_TOOLTIP
 
-			add_army_tradition_or_mil_power = { amount = 10 }
+			add_army_tradition_or_mil_power = { amount = 20 }
+
 
 			custom_tooltip = SEPERATOR_TOOLTIP
 
@@ -2419,14 +2431,11 @@ WoC_austria_3_germany = {
 		} 
 
 		effect = {  
-			custom_tooltip = HAB_UPGRADE_OFFICERS_PRIVILEGE
-			set_country_flag = hab_military_reform_flag
-
-			custom_tooltip = SEPERATOR_TOOLTIP
+			add_army_professionalism = 0.15
 
 			add_country_modifier = {
 				name = hab_haugwitz_reforms
-				duration = 7300
+				duration = -1
 			}
 
 			define_advisor = {
@@ -2601,8 +2610,8 @@ WoC_austria_3_1 = {
 
 					define_advisor = {
 						type = diplomat
-						skill = 2
-						cost_multiplier = 0.5
+						skill = 3
+						cost_multiplier = 0.25
 						culture = hungarian
 					}
 				"
@@ -2709,16 +2718,8 @@ WoC_austria_3_1 = {
 	
 		trigger = {  
 			army_tradition = 40
-			num_of_cavalry = 25
-			OR = {
-				full_idea_group = aristocracy_ideas
-				AND = {
-					NOT = {
-						current_age = age_of_discovery
-					}
-					num_of_cavalry = 45
-				}
-			}
+			num_of_cavalry = 16
+			army_professionalism = 0.2
 		} 
 	
 		effect = {  
@@ -3518,13 +3519,13 @@ WoC_austria_4 = {
 				else = {
 					total_own_and_non_tributary_subject_development = 300
 				}
-				num_of_wars = { amount = 5 }
+				num_of_wars = { amount = 4 }
 			}
 		}
 		effect = {
 			add_country_modifier = {
 				name = hab_balance_of_power_mod
-				duration = 7300
+				duration = -1
 			}
 
 			custom_tooltip = HAB_MODIFY_DIPLOMAT_ADVISOR
@@ -3587,7 +3588,7 @@ WoC_austria_4 = {
 
 			add_country_modifier = {
 				name = hab_many_thrones
-				duration = 7300
+				duration = 18500
 			}
 
 			add_power_projection_mission = {
@@ -4208,7 +4209,7 @@ WoC_austria_5 = {
 			owner = {
 				NOT = { tag = ROOT }
 				is_great_power = yes
-				NOT = { great_power_rank  = 4 }
+				NOT = { great_power_rank  = 5 }
 			}
 		}
 		trigger = {
@@ -4220,16 +4221,16 @@ WoC_austria_5 = {
 					}
 				}
 				NOT = {
-					great_power_rank = 4
+					great_power_rank = 5
 				}
 			}
 			else = {
 				total_own_and_non_tributary_subject_development = 800
 			}
-			army_size = 125
+			army_size = 100
 			OR = {
 				full_idea_group = diplomatic_ideas
-				diplomatic_reputation = 7
+				diplomatic_reputation = 6
 			}
 		}
 		effect = {
